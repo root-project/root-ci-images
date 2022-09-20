@@ -1,4 +1,9 @@
 
+## Build
+```sh
+docker build -t ghcr.io/olemorud/ubuntu:buildready .
+```
+
 ## Run
 ```sh
 docker run \
