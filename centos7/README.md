@@ -1,3 +1,14 @@
+
+## Build
 ```sh
-sudo docker run -it --volume /cvmfs:/cvmfs:shared centos7base
+docker build -t ghcr.io/olemorud/centos7:buildready .
+```
+
+## Run
+```sh
+docker run \
+  -it \
+  --rm \
+  --volume /cvmfs:/cvmfs:shared \
+  ghcr.io/olemorud/centos7:buildready
 ```
