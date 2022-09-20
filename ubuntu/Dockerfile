@@ -1,8 +1,8 @@
 
 FROM ubuntu:22.04
 
-LABEL maintainer.name="ROOT team"
-LABEL maintainer.email="root-dev@cern.ch"
+LABEL maintainer.email="ole.kristian.morud@cern.ch"
+LABEL org.opencontainers.image.source="https://github.com/olemorud/root-baseimages"
 
 ENV LANG=C.UTF-8
 
@@ -16,11 +16,11 @@ RUN apt-get update -qq && \
     rm -rf /var/cache/apt/archives/* && \
     rm -rf /var/lib/apt/lists/*
 
-RUN yes | unminimize \
- && apt-get autoremove -y \
- && apt-get clean -y \
- && rm -rf /var/cache/apt/archives/* \
- && rm -rf /var/lib/apt/lists/*
+#RUN yes | unminimize \
+# && apt-get autoremove -y \
+# && apt-get clean -y \
+# && rm -rf /var/cache/apt/archives/* \
+# && rm -rf /var/lib/apt/lists/*
 
 ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
             -Dgnuinstall=ON \
