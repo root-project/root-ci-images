@@ -39,6 +39,6 @@ jobs:
           context: ./${{ matrix.image }}/
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:buildready
-          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:buildready
-          cache-to: type=inline
+          cache-from: type=gha
+          cache-to: type=gha
 
