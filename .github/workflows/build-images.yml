@@ -28,8 +28,10 @@ jobs:
 
       - name: Link image to repository by appending a label to Dockerfile
         run: |
-          sudo chmod 777 ${{ matrix.image }}/Dockerfile &&
-          sed -i "/^FROM.*/a LABEL org.opencontainers.image.source https://github.com/${{ github.repository }}" ${{ matrix.image }}/Dockerfile &&
+          sudo chmod 777 ${{ matrix.image }}/Dockerfile;
+          if ! grep -Fxq 'org.opencontainers.image.source' ${{ matrix.image }}/Dockerfile; then
+            sed -i "/^FROM.*/a LABEL org.opencontainers.image.source https://github.com/${{ github.repository }}" ${{ matrix.image }}/Dockerfile
+          fi
           cat ${{ matrix.image }}/Dockerfile
 
       - name: Build the docker image
