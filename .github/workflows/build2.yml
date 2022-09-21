@@ -44,5 +44,3 @@ jobs:
           tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:buildready
           cache-from: type=gha,scope=${{ matrix.image }}
           cache-to: type=gha,mode=max,scope=${{ matrix.image }}
-          outputs: type=cacheonly
-
