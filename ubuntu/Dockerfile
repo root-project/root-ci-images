@@ -8,13 +8,14 @@ ENV LANG=C.UTF-8
 
 COPY packages packages
 
-RUN apt-get update -qq && \
-    ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
-    apt-get -y install $(cat packages) && \
-    apt-get autoremove -y && \
-    apt-get clean -y && \
-    rm -rf /var/cache/apt/archives/* && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update -qq \
+ && ln -sf /usr/share/zoneinfo/UTC /etc/localtime  \
+ && apt-get -y install $(cat packages) --no-install-recommends \
+ && apt-get autoremove -y \
+ && apt-get clean -y \
+ && rm -rf /var/cache/apt/archives/* \
+ && rm -rf /var/lib/apt/lists/* \
+ && rm packages
 
 #RUN yes | unminimize \
 # && apt-get autoremove -y \
