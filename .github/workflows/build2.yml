@@ -1,0 +1,41 @@
+# This workflow creates docker images that are used for building ROOT in a Jenkins pipeline
+# 
+# All created images are uploaded to GitHub Container registry
+
+name: Create images v2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  schedule:
+    # every Sunday
+    - cron:  '0 0 * * 0'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        image: ["fedora34", "centos7", "centos8", "ubuntu"]
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.CR_PAT }}
+      
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: ./${{ matrix.image }}/
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:buildready
