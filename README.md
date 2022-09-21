@@ -25,8 +25,9 @@ cmake /tmp/root/ -DCMAKE_INSTALL_PREFIX=/usr $OPTIONS
 cmake --build . --target install -- -j$(nproc)
 ```
 
-To run it, first source thisroot.sh and then run the executable (/usr/bin is in $PATH)
+To run it, first source thisroot.sh and then run the executable
 ```sh
 source /usr/bin/thisroot.sh
+# (/usr/bin is in $PATH)
 root
 ```
