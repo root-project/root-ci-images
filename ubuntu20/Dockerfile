@@ -1,9 +1,6 @@
 
 FROM ubuntu:20.04
 
-LABEL maintainer.email="ole.kristian.morud@cern.ch"
-LABEL org.opencontainers.image.source="https://github.com/olemorud/root-baseimages"
-
 ENV LANG=C.UTF-8
 
 COPY packages packages

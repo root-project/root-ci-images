@@ -1,8 +1,6 @@
 
 FROM centos:7
 
-LABEL org.opencontainers.image.source="https://github.com/olemorud/root-baseimages"
-
 WORKDIR /tmp
 
 COPY packages packages
