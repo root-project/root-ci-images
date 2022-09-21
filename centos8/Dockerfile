@@ -18,7 +18,7 @@ COPY packages /packages
 RUN dnf install -y epel-release yum-utils \
  && dnf install -y yum-utils \
  && dnf config-manager --set-enabled powertools \
- && dnf install -y $(cat packages) \
+ && dnf install -y --setopt=install_weak_deps=False $(cat packages) \
  && rm -f /packages \
  && dnf clean all \
  && rm -rf /var/cache/yum
