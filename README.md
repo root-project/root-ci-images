@@ -5,7 +5,8 @@ They also ensure that `cmake` will run a cmake with version >=3. The cmake argum
 
 These are used by a Jenkins pipeline that eventually runs `cmake /tmp/root/ -DCMAKE_INSTALL_PREFIX=/usr $OPTIONS`
 
-## install, build and run ROOT manually within an image 
+## Install, build and run ROOT manually within an image
+To install ROOT, pull from the github repository and build it with cmake:
 ```sh
 # INSTALL
 cd /tmp/
@@ -22,9 +23,10 @@ cd /tmp/build
 cmake /tmp/root/ -DCMAKE_INSTALL_PREFIX=/usr $OPTIONS
 
 cmake --build . --target install -- -j$(nproc)
+```
 
-
-# RUN
+To run it, first source thisroot.sh and then run the executable (/usr/bin is in $PATH)
+```sh
 source /usr/bin/thisroot.sh
 root
 ```
