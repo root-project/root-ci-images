@@ -15,8 +15,7 @@ RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-* \
 
 COPY packages /packages
 
-RUN dnf update -q -y \
- && dnf install -y epel-release yum-utils \
+RUN dnf install -y epel-release yum-utils \
  && dnf install -y yum-utils \
  && dnf config-manager --set-enabled powertools \
  && dnf install -y $(cat packages) \
