@@ -20,6 +20,8 @@ RUN chmod u+x /cmakepatch.sh \
 && /cmakepatch.sh \
 && rm /cmakepatch.sh
 
+RUN update-ca-certificates
+
 #RUN yes | unminimize \
 # && apt-get autoremove -y \
 # && apt-get clean -y \

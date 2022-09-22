@@ -20,6 +20,8 @@ RUN apt-get update -qq \
 # && rm -rf /var/cache/apt/archives/* \
 # && rm -rf /var/lib/apt/lists/*
 
+RUN update-ca-certificates
+
 ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
             -Dgnuinstall=ON \
             -Dsoversion=ON \
