@@ -13,7 +13,7 @@ version=3.24
 build=1
 mkdir -p /tmp/cmake
 cd /tmp/cmake
-wget https://cmake.org/files/v$version/cmake-$version.$build.tar.gz
+wget https://cmake.org/files/v$version/cmake-$version.$build.tar.gz --no-check-certificate
 tar -xzvf cmake-$version.$build.tar.gz
 cd cmake-$version.$build/
 
