@@ -2,8 +2,8 @@
 # This script builds and installs a newer version of CMake from scratch
 # cmake >= 3.16 is needed to build ROOT, ubuntu18 repositories do have this
 
-sudo apt-get update
-sudo apt-get install build-essential libtool autoconf unzip wget
+apt-get update
+apt-get install build-essential libtool autoconf unzip wget
 apt-get autoremove -y
 apt-get clean -y
 rm -rf /var/cache/apt/archives/*
