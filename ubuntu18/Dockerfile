@@ -16,7 +16,9 @@ RUN apt-get update -qq \
 
 COPY cmakepatch.sh /cmakepatch.sh
 
-RUN /cmakepatch.sh && rm /cmakepatch.sh
+RUN chmod u+x /cmakepatch.sh \
+&& /cmakepatch.sh \
+&& rm /cmakepatch.sh
 
 #RUN yes | unminimize \
 # && apt-get autoremove -y \
