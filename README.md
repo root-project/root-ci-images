@@ -8,7 +8,6 @@ These are used by a Jenkins pipeline that eventually runs `cmake /tmp/root/ -DCM
 ## Install, build and run ROOT manually within an image
 To install ROOT, pull the source code from the github repository and build it with cmake:
 ```sh
-# INSTALL
 cd /tmp/
 
 for retry in {1..5}; do
