@@ -8,6 +8,7 @@ git
 graphviz-dev
 libavahi-compat-libdnssd-dev
 libcfitsio-dev
+libcurl4-openssl-dev
 libfftw3-dev
 libftgl-dev
 libglew-dev
