@@ -1,4 +1,5 @@
 binutils
+ca-certificates
 cmake
 dpkg-dev
 g++
@@ -25,6 +26,5 @@ libxpm-dev
 python3
 python3-dev
 qtwebengine5-dev
-update-ca-certificates
 wget
 xlibmesa-glu-dev
