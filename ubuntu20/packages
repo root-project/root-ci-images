@@ -1,6 +1,7 @@
 binutils
 ca-certificates
 cmake
+curl
 dpkg-dev
 g++
 gcc

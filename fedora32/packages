@@ -2,6 +2,7 @@ avahi-compat-libdns_sd-devel
 binutils
 cfitsio-devel
 cmake
+curl
 fftw-devel
 ftgl-devel
 gcc
@@ -23,7 +24,6 @@ mesa-libGLU-devel
 mysql-devel
 openldap-devel
 openssl-devel
-redhat-lsb-core
 pcre-devel
 python
 python3-numpy
@@ -32,3 +32,4 @@ R-devel
 R-Rcpp-devel
 R-RInside-devel
 readline-devel
+redhat-lsb-core

@@ -2,6 +2,7 @@ avahi-compat-libdns_sd-devel
 binutils
 cfitsio-devel
 cmake
+curl
 fftw-devel
 ftgl-devel
 gcc
@@ -24,8 +25,8 @@ mysql-devel
 openldap-devel
 openssl-devel
 pcre-devel
-python39
 python3-numpy
+python39
 qt5-qtwebengine-devel
 R-devel
 R-Rcpp-devel

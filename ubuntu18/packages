@@ -1,5 +1,6 @@
 binutils
 ca-certificates
+curl
 dpkg-dev
 g++
 gcc
