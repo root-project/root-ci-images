@@ -1,6 +1,8 @@
 
 FROM ubuntu:20.04
 
+RUN useradd -s /bin/bash sftnight
+
 ENV LANG=C.UTF-8
 
 COPY packages packages
@@ -44,3 +46,6 @@ ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
             -DCMAKE_INSTALL_SRCDIR=/dev/null \
             -DCMAKE_INSTALL_SYSCONFDIR=/etc/root \
             -DCMAKE_INSTALL_TUTDIR=share/root/tutorials
+
+USER sftnight
+
