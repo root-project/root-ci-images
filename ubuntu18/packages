@@ -21,6 +21,7 @@ liblzma5
 libmysqlclient-dev
 libpcre3-dev
 libssl-dev
+libuuid1
 libx11-dev
 libxext-dev
 libxft-dev
