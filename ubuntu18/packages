@@ -20,6 +20,7 @@ libkrb5-dev
 libldap2-dev
 liblzma-dev
 libmysqlclient-dev
+libodbc1
 libpcre3-dev
 libssl-dev
 libuuid1
