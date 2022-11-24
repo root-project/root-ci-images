@@ -35,7 +35,7 @@ ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
             -Dsoversion=ON \
             -Dbuiltin_tbb=ON \
             -Dbuiltin_lzma=ON \
-            -Dbuiltin_xrootd=ON
+            -Dxrootd=OFF
 
 USER sftnight
 
