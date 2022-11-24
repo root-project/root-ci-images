@@ -30,5 +30,6 @@ libxpm-dev
 python3
 python3-dev
 qtwebengine5-dev
+uuid-dev
 wget
 xlibmesa-glu-dev
