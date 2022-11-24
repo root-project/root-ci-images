@@ -38,6 +38,4 @@ RUN update-ca-certificates
 ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
             -Dgnuinstall=ON \
             -Dsoversion=ON \
-            -Dbuiltin_tbb=OFF \
-            -Dbuiltin_lzma=OFF \
             -Dxrootd=OFF
