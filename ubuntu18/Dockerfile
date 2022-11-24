@@ -1,10 +1,19 @@
 
 FROM ubuntu:18.04
 
-RUN useradd -s /bin/bash sftnight
+# RUN useradd -s /bin/bash sftnight
 
 ENV LANG=C.UTF-8
 
+# Get cmake 3.24
+COPY cmakepatch.sh /cmakepatch.sh
+
+RUN chmod u+x /cmakepatch.sh \
+&& /cmakepatch.sh \
+&& rm /cmakepatch.sh
+
+
+# Install ROOT dependencies
 COPY packages packages
 
 RUN apt-get update -qq \
@@ -16,11 +25,7 @@ RUN apt-get update -qq \
  && rm -rf /var/lib/apt/lists/* \
  && rm packages
 
-COPY cmakepatch.sh /cmakepatch.sh
 
-RUN chmod u+x /cmakepatch.sh \
-&& /cmakepatch.sh \
-&& rm /cmakepatch.sh
 
 RUN update-ca-certificates
 
@@ -36,6 +41,3 @@ ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
             -Dbuiltin_tbb=OFF \
             -Dbuiltin_lzma=OFF \
             -Dxrootd=OFF
-
-USER sftnight
-
