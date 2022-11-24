@@ -17,7 +17,7 @@ libglew-dev
 libgsl0-dev
 libkrb5-dev
 libldap2-dev
-liblzma5
+liblzma-dev
 libmysqlclient-dev
 libpcre3-dev
 libssl-dev
