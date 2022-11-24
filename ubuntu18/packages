@@ -27,6 +27,7 @@ libxext-dev
 libxft-dev
 libxml2-dev
 libxpm-dev
+libzstd-dev
 python3
 python3-dev
 qtwebengine5-dev
