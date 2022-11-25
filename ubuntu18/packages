@@ -38,6 +38,7 @@ libpcre++-dev
 libpcre3-dev
 libpng-dev
 libpq-dev
+libprotobuf-dev
 libpythia8-dev
 libsqlite3-dev
 libssl-dev
