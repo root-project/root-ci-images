@@ -40,6 +40,7 @@ libpng-dev
 libpq-dev
 libprotobuf-dev
 libpythia8-dev
+libreadline-dev
 libsqlite3-dev
 libssl-dev
 libtbb-dev
