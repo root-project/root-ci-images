@@ -1,4 +1,6 @@
 
+# Centos7 is no longer supported
+
 ## Build
 ```sh
 docker build -t ghcr.io/olemorud/centos7:buildready .

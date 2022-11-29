@@ -25,9 +25,9 @@ RUN apt-get update -qq \
  && rm -rf /var/lib/apt/lists/* \
  && rm packages
 
-
-
 RUN update-ca-certificates
+
+RUN pip3 install openstacksdk
 
 #RUN yes | unminimize \
 # && apt-get autoremove -y \
@@ -35,6 +35,3 @@ RUN update-ca-certificates
 # && rm -rf /var/cache/apt/archives/* \
 # && rm -rf /var/lib/apt/lists/*
 
-ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
-            -Dgnuinstall=ON \
-            -Dsoversion=ON

@@ -24,9 +24,7 @@ RUN apt-get update -qq \
 
 RUN update-ca-certificates
 
-ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
-            -Dgnuinstall=ON \
-            -Dsoversion=ON
-
+RUN pip3 install openstacksdk
+t
 USER sftnight
 
