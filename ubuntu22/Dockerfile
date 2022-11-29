@@ -22,6 +22,8 @@ RUN apt-get update -qq \
 # && rm -rf /var/cache/apt/archives/* \
 # && rm -rf /var/lib/apt/lists/*
 
+RUN pip3 install openstacksdk
+
 RUN update-ca-certificates
 
 ENV OPTIONS -DCMAKE_CXX_STANDARD=17 \
