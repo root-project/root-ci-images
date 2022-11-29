@@ -27,6 +27,7 @@ openssl-devel
 pcre-devel
 python
 python3-numpy
+python3-pip
 qt5-qtwebengine-devel
 R-devel
 R-Rcpp-devel

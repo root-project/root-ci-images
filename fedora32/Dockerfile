@@ -10,11 +10,12 @@ RUN yum update -y \
 COPY packages packages
 
 RUN yum install $(cat packages) -y --setopt=install_weak_deps=False \
+ && pip3 install openstacksdk \
  && rm -f packages \
  && yum clean all \
  && rm -rf /var/cache/yum
 
-wORKDIR /rootinstall
+WORKDIR /rootinstall
 
 USER sftnight
 
