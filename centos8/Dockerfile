@@ -19,6 +19,7 @@ RUN dnf install -y epel-release yum-utils \
  && dnf install -y yum-utils \
  && dnf config-manager --set-enabled powertools \
  && dnf install -y --setopt=install_weak_deps=False $(cat packages) \
+ && pip3 install --upgrade pip \
  && pip3 install openstacksdk \
  && rm -f /packages \
  && dnf clean all \
