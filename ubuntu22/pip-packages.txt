@@ -1,3 +1,4 @@
+setuptools
 dask
 pyspark
 distributed
