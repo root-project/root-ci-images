@@ -24,7 +24,7 @@ RUN apt-get update -qq \
 
 RUN update-ca-certificates
 
-RUN pip3 install --upgrade pip && pip3 install openstacksdk
+RUN pip3 install --upgrade pip && pip3 install openstacksdk pyspark
 
 USER sftnight
 
