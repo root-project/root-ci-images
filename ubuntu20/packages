@@ -4,6 +4,7 @@ ca-certificates
 cmake
 curl
 davix-dev
+default-jdk
 dcap-dev
 dpkg-dev
 fonts-freefont-ttf
