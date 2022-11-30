@@ -38,6 +38,7 @@ libpcre++-dev
 libpcre3-dev
 libpng-dev
 libpq-dev
+libprotoc-dev
 libprotobuf-dev
 libpythia8-dev
 libreadline-dev
