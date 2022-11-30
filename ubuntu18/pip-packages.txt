@@ -1,4 +1,4 @@
 dask
 pyspark
 distributed
-openstack
+openstacksdk
