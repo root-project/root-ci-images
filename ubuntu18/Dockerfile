@@ -12,9 +12,8 @@ RUN chmod u+x /cmakepatch.sh \
 && /cmakepatch.sh \
 && rm /cmakepatch.sh
 
-
 # Install ROOT dependencies
-COPY packages packages
+COPY packages.txt packages.txt
 
 RUN apt-get update -qq \
  && ln -sf /usr/share/zoneinfo/UTC /etc/localtime  \
@@ -25,9 +24,12 @@ RUN apt-get update -qq \
  && rm -rf /var/lib/apt/lists/* \
  && rm packages
 
-RUN update-ca-certificates
+COPY pip-packages.txt pip-packages.txt
 
-RUN pip3 install --upgrade pip && pip3 install openstacksdk
+RUN pip3 install --upgrade pip \
+ && pip3 install $(cat packages)
+
+RUN update-ca-certificates
 
 #RUN yes | unminimize \
 # && apt-get autoremove -y \

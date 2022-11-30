@@ -1,7 +1,7 @@
 
 FROM ubuntu:20.04
 
-RUN useradd -s /bin/bash sftnight
+# RUN useradd -s /bin/bash sftnight
 
 ENV LANG=C.UTF-8
 
@@ -16,15 +16,17 @@ RUN apt-get update -qq \
  && rm -rf /var/lib/apt/lists/* \
  && rm packages
 
+
+COPY pip-packages.txt pip-packages.txt
+
+RUN pip3 install --upgrade pip \
+ && pip3 install $(cat packages)
+
+RUN update-ca-certificates
+
 #RUN yes | unminimize \
 # && apt-get autoremove -y \
 # && apt-get clean -y \
 # && rm -rf /var/cache/apt/archives/* \
 # && rm -rf /var/lib/apt/lists/*
-
-RUN update-ca-certificates
-
-RUN pip3 install --upgrade pip && pip3 install openstacksdk
-
-USER sftnight
 
