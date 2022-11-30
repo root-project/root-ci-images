@@ -1,4 +1,4 @@
-setuptools
 dask
 pyspark
 distributed
+openstack
