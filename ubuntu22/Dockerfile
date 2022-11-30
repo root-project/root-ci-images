@@ -5,6 +5,8 @@ FROM ubuntu:22.04
 
 ENV LANG=C.UTF-8
 
+
+
 COPY packages.txt packages.txt
 
 RUN apt-get update -qq \
@@ -17,10 +19,13 @@ RUN apt-get update -qq \
  && rm packages.txt
 
 
+
 COPY pip-packages.txt pip-packages.txt
 
-RUN pip3 install --upgrade pip \
- && pip3 install $(cat pip-packages.txt)
+RUN python3 -m pip install --upgrade pip \
+ && python3 -m pip install $(cat pip-packages.txt)
+
+
 
 RUN update-ca-certificates
 
