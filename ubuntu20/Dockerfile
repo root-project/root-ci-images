@@ -5,7 +5,7 @@ FROM ubuntu:20.04
 
 ENV LANG=C.UTF-8
 
-COPY packages packages
+COPY packages.txt packages.txt
 
 RUN apt-get update -qq \
  && ln -sf /usr/share/zoneinfo/UTC /etc/localtime  \
