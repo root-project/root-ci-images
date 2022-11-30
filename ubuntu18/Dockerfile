@@ -27,7 +27,9 @@ RUN apt-get update -qq \
 COPY pip-packages.txt pip-packages.txt
 
 RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install $(cat pip-packages.txt)
+ && python3 -m pip install $(cat pip-packages.txt) \
+ && rm -rf ~/.cache/pip \
+ && rm pip-packages.txt
 
 RUN update-ca-certificates
 
