@@ -7,6 +7,11 @@ ENV LANG=C.UTF-8
 
 
 
+RUN update-ca-certificates
+
+
+
+
 COPY packages.txt packages.txt
 
 RUN apt-get update -qq \
@@ -29,7 +34,6 @@ RUN python3 -m pip install --upgrade pip \
 
 
 
-RUN update-ca-certificates
 
 #RUN yes | unminimize \
 # && apt-get autoremove -y \
