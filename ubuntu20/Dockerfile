@@ -7,7 +7,6 @@ ENV LANG=C.UTF-8
 
 
 
-RUN update-ca-certificates
 
 
 
@@ -21,7 +20,8 @@ RUN apt-get update -qq \
  && apt-get clean -y \
  && rm -rf /var/cache/apt/archives/* \
  && rm -rf /var/lib/apt/lists/* \
- && rm packages.txt
+ && rm packages.txt \
+ && update-ca-certificates
 
 
 
