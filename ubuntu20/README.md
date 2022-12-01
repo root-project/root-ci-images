@@ -1,7 +1,7 @@
 
 ## Build
 ```sh
-docker build -t ghcr.io/olemorud/ubuntu:buildready .
+docker build -t ghcr.io/olemorud/ubuntu20:buildready .
 ```
 
 ## Run
@@ -9,6 +9,6 @@ docker build -t ghcr.io/olemorud/ubuntu:buildready .
 docker run \
  --rm \
  --it \
- ghcr.io/olemorud/ubuntu:buildready
+ ghcr.io/olemorud/ubuntu20:buildready
 ```
 
