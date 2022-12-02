@@ -33,10 +33,10 @@ libgsl0-dev
 libjpeg-dev
 libkrb5-dev
 libldap2-dev
+libllvm-ocaml-dev
 liblz4-dev
 liblzma-dev
 libmysqlclient-dev
-libocaml-compiler-libs-ocaml-dev
 libpcre++-dev
 libpcre3-dev
 libpng-dev
