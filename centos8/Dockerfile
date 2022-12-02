@@ -15,7 +15,7 @@ RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-* \
  && dnf autoremove \
  && dnf clean all
 
-COPY packages /packages
+COPY packages.txt /packages.txt
 
 RUN dnf install -y --setopt=install_weak_deps=False $(cat packages.txt) \
  && dnf autoremove \
