@@ -16,6 +16,6 @@ RUN yum install $(cat packages.txt) -y --setopt=install_weak_deps=False \
 
 COPY pip-packages.txt pip-packages.txt
 
-RUN pip3 install --upgrade pip \
- && pip3 install $(cat pip-packages.txt) \
+RUN python3 -m pip install --upgrade pip \
+ && python3 -m pip install $(cat pip-packages.txt) \
  && rm -f pip-packages.txt
