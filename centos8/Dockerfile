@@ -15,12 +15,12 @@ RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-* \
  && dnf autoremove \
  && dnf clean all
 
-COPY packages.txt /packages.txt
+COPY packages.txt packages.txt
 
 RUN dnf install -y --setopt=install_weak_deps=False $(cat packages.txt) \
  && dnf autoremove \
  && dnf clean all \
- && rm -f /packages
+ && rm -f packages.txt
 
 RUN pip3 install --upgrade pip \
  && pip3 install $(cat pip-packages.txt)
