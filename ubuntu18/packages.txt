@@ -35,7 +35,6 @@ libldap2-dev
 liblz4-dev
 liblzma-dev
 libmysqlclient-dev
-libllvm-ocaml-dev
 libpcre++-dev
 libpcre3-dev
 libpng-dev
