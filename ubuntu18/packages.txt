@@ -8,7 +8,7 @@ dcap-dev
 dpkg-dev
 fonts-freefont-ttf
 g++
-gcc
+gcc8
 gfortran
 git
 graphviz-dev
