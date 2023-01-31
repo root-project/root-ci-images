@@ -36,7 +36,6 @@ mysql-devel
 openldap-devel
 openssl-devel
 pcre-devel
-mariadb-devel
 ncurses-libs
 openjpeg2-devel
 postgresql-devel
