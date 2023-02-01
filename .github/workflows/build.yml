@@ -43,5 +43,6 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:buildready
           labels: org.opencontainers.image.source=https://github.com/${{ github.repository }}
+          no-cache: ${{ github.event_name != 'push' }}
           cache-from: type=gha,scope=${{ matrix.image }}
           cache-to: type=gha,mode=max,scope=${{ matrix.image }}
