@@ -10,8 +10,8 @@ on:
     branches:
       - master
   schedule:
-    # every Sunday
-    - cron:  '0 0 * * 0'
+    # every day
+    - cron:  '0 2 * * *'
 
 jobs:
   build:
