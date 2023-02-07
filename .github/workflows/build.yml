@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
   schedule:
     # every day
     - cron:  '0 2 * * *'
@@ -41,7 +41,7 @@ jobs:
         with:
           context: ./${{ matrix.image }}/
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:buildready
+          tags: registry.cern.ch/root-ci/${{ matrix.image }}:buildready
           labels: org.opencontainers.image.source=https://github.com/${{ github.repository }}
           no-cache: ${{ github.event_name != 'push' }}
           cache-from: type=gha,scope=${{ matrix.image }}
