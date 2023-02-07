@@ -17,7 +17,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image: ["fedora34", "fedora32", "centos8", "ubuntu22", "ubuntu20", "ubuntu18"]
+        image: ["fedora37", "fedora34", "fedora32", "centos8", "ubuntu22", "ubuntu20", "ubuntu18"]
       fail-fast: false
 
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
-      
+
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
