@@ -17,7 +17,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image: ["fedora37", "fedora34", "fedora32", "centos8", "ubuntu22", "ubuntu20", "ubuntu18"]
+        image: ["fedora37", "centos8", "ubuntu22", "ubuntu20", "ubuntu18"]
       fail-fast: false
 
     runs-on: ubuntu-latest
