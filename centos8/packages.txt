@@ -24,7 +24,6 @@ graphviz-devel
 gsl-devel
 jemalloc-devel
 libAfterImage-devel
-libarrow-devel
 libiodbc-devel
 libjpeg-turbo-devel
 libtiff-devel
