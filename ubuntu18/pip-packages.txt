@@ -2,3 +2,4 @@ dask
 distributed
 openstacksdk
 pyspark
+pytest

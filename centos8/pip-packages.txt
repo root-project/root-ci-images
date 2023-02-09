@@ -4,3 +4,4 @@ onnx
 openstacksdk
 pyspark
 pygments
+pytest
