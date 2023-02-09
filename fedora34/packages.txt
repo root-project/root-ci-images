@@ -22,6 +22,7 @@ gsl-devel
 jemalloc-devel
 libAfterImage-devel
 libiodbc-devel
+libjpeg-turbo-devel
 libtiff-devel
 libX11-devel
 libXext-devel
@@ -33,11 +34,12 @@ make
 mesa-libGL-devel
 mesa-libGLU-devel
 mysql-devel
+ncurses-libs
+ocaml-findlib-devel
+openjpeg2-devel
 openldap-devel
 openssl-devel
 pcre-devel
-ncurses-libs
-openjpeg2-devel
 postgresql-devel
 protobuf-compiler
 protobuf-devel
@@ -52,6 +54,7 @@ qt5-qtwebengine-devel
 R-devel
 R-Rcpp-devel
 R-RInside-devel
+rapidyaml-devel
 readline-devel
 redhat-lsb-core
 redhat-rpm-config
@@ -63,3 +66,4 @@ xrootd-server-devel
 xxhash-devel
 xz-devel
 zlib-devel
+zstd

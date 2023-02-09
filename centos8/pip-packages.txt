@@ -3,3 +3,4 @@ distributed
 onnx
 openstacksdk
 pyspark
+pygments
