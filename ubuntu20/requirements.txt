@@ -1,0 +1,12 @@
+cffi>=1.9.1
+dask>=2022.08.1
+distributed>=2022.08.1
+metakernel>=0.20.0
+notebook>=4.4.1
+# numba>=0.47.0
+numpy>=1.4.1
+onnx>=1.13.0
+openstacksdk>=1.0.1
+pygments>=0.2.2
+pyspark>=2.4
+pytest>=7.2.1

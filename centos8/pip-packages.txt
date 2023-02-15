@@ -1,7 +1,0 @@
-dask
-distributed
-onnx
-openstacksdk
-pyspark
-pygments
-pytest

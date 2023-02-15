@@ -14,8 +14,9 @@ RUN yum install $(cat packages.txt) -y --setopt=install_weak_deps=False \
  && yum clean all \
  && rm -rf /var/cache/yum
 
-COPY pip-packages.txt pip-packages.txt
+COPY requirements.txt requirements.txt
 
 RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install $(cat pip-packages.txt) \
- && rm -f pip-packages.txt
+ && python3 -m pip install -r requirements.txt \
+ && rm -f requirements.txt
+

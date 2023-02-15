@@ -24,12 +24,11 @@ RUN apt-get update -qq \
  && rm -rf /var/lib/apt/lists/* \
  && rm packages.txt
 
-COPY pip-packages.txt pip-packages.txt
+COPY requirements.txt requirements.txt
 
 RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install $(cat pip-packages.txt) \
- && rm -rf ~/.cache/pip \
- && rm -f pip-packages.txt
+ && python3 -m pip install -r requirements.txt \
+ && rm -f requirements.txt
 
 RUN update-ca-certificates
 
