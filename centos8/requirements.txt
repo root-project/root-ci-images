@@ -1,5 +1,5 @@
 cffi>=1.9.1
-dask>=2022.08.1
+dask>=2022.08.1 ; python_version >= "3.7"
 distributed>=2022.08.1
 metakernel>=0.20.0
 notebook>=4.4.1
