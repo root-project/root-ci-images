@@ -3,7 +3,7 @@ dask>=2022.08.1 ; python_version >= "3.8"
 distributed>=2022.08.1
 metakernel>=0.20.0
 notebook>=4.4.1
-numba>=0.47.0 ; python_version <= "3.11"
+numba>=0.47.0 ; python_version <= "3.10"
 numpy>=1.4.1
 onnx>=1.13.0
 openstacksdk>=1.0.1
