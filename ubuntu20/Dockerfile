@@ -25,12 +25,12 @@ RUN apt-get update -qq \
 
 
 
-COPY requirements.txt requirements.txt
+ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
+ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.txt requirements-roottest.txt
 
 RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install -r requirements.txt \
- && rm -f requirements.txt
-
+ && python3 -m pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
+ && rm -f requirements-root.txt requirements-roottest.txt
 
 
 
