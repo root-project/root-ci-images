@@ -14,9 +14,8 @@ RUN dnf install $(cat packages.txt) -y --setopt=install_weak_deps=False \
  && dnf clean all \
  && rm -rf /var/cache/dnf
 
-ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
-ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.txt requirements-roottest.txt
+COPY requirements.txt requirements.txt
 
 RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
- && rm -f requirements-root.txt requirements-roottest.txt
+ && python3 -m pip install -r requirements.txt \
+ && rm -f requirements.txt
