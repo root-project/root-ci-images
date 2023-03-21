@@ -1,5 +1,5 @@
 
-FROM fedora:37
+FROM registry.cern.ch/docker.io/library/fedora:37
 
 # RUN useradd -s /bin/bash sftnight
 

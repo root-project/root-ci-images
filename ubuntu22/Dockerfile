@@ -1,5 +1,5 @@
 
-FROM ubuntu:22.04
+FROM registry.cern.ch/docker.io/library/ubuntu:22.04
 
 # RUN useradd -s /bin/bash sftnight
 

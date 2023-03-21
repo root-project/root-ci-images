@@ -1,5 +1,5 @@
 
-FROM ubuntu:20.04
+FROM registry.cern.ch/docker.io/library/ubuntu:20.04
 
 # RUN useradd -s /bin/bash sftnight
 
