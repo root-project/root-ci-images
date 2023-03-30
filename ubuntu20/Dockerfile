@@ -17,8 +17,7 @@ RUN apt-get update -qq \
  && rm packages.txt \
  && update-ca-certificates \
  && curl -O -L https://github.com/Kitware/CMake/releases/download/v3.26.2/cmake-3.26.2-linux-x86_64.sh \
- && chmod a+x cmake-*.sh \
- && ./cmake-*.sh \
+ && sh ./cmake-*.sh --skip-license --prefix=/usr/local/ \
  && rm ./cmake-*.sh
 
 
