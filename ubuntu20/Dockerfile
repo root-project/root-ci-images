@@ -1,14 +1,8 @@
-
 FROM ubuntu:20.04
 
 # RUN useradd -s /bin/bash sftnight
 
 ENV LANG=C.UTF-8
-
-
-
-
-
 
 
 COPY packages.txt packages.txt
@@ -21,8 +15,11 @@ RUN apt-get update -qq \
  && rm -rf /var/cache/apt/archives/* \
  && rm -rf /var/lib/apt/lists/* \
  && rm packages.txt \
- && update-ca-certificates
-
+ && update-ca-certificates \
+ && curl -O -L https://github.com/Kitware/CMake/releases/download/v3.26.2/cmake-3.26.2-linux-x86_64.sh \
+ && chmod a+x cmake-*.sh \
+ && ./cmake-*.sh \
+ && rm ./cmake-*.sh
 
 
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt

@@ -2,7 +2,6 @@ avahi-compat-libdns_sd-devel
 avahi-devel
 binutils
 cfitsio-devel
-cmake
 curl
 davix-devel
 dcap-devel
