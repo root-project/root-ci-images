@@ -36,14 +36,12 @@ libldap2-dev
 libllvm-ocaml-dev
 liblz4-dev
 liblzma-dev
-libmysqlclient-dev
 libpcre++-dev
 libpcre3-dev
 libpng-dev
 libpq-dev
 libprotobuf-dev
 libprotoc-dev
-libpythia8-dev
 libreadline-dev
 libsqlite3-dev
 libssl-dev
