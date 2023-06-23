@@ -17,5 +17,5 @@ ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt 
 ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.txt requirements-roottest.txt
 
 RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
+ && python3 -m pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk<=1.2.0 \
  && rm -f requirements-root.txt requirements-roottest.txt
