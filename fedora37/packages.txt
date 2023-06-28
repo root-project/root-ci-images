@@ -2,6 +2,7 @@ avahi-compat-libdns_sd-devel
 avahi-devel
 binutils
 cfitsio-devel
+chromium
 cmake
 curl
 davix-devel
