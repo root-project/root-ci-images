@@ -55,7 +55,6 @@ R-devel
 R-Rcpp-devel
 R-RInside-devel
 rapidyaml-devel
-redhat-lsb-core
 redhat-rpm-config
 sqlite-devel
 srm-ifce-devel
