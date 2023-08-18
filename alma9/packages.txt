@@ -5,6 +5,7 @@ cfitsio-devel
 curl
 davix-devel
 dcap-devel
+diffutils
 fcgi
 fcgi-devel
 fftw-devel
