@@ -1,5 +1,5 @@
 
-FROM ubuntu:22.04
+FROM ubuntu:23.04
 
 # RUN useradd -s /bin/bash sftnight
 
