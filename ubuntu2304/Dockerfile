@@ -23,10 +23,9 @@ RUN apt-get update -qq \
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
 ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.txt requirements-roottest.txt
 
-RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
+RUN mkdir -p /py-venv && python3 -m venv /py-venv/ROOT-CI && /py-venv/ROOT-CI/bin/pip install --upgrade pip \
+ && /py-venv/ROOT-CI/bin/pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
  && rm -f requirements-root.txt requirements-roottest.txt
-
 
 RUN update-ca-certificates
 
