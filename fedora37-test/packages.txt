@@ -1,4 +1,3 @@
-lcov
 
 avahi-compat-libdns_sd-devel
 avahi-devel
@@ -22,6 +21,7 @@ glew-devel
 graphviz-devel
 gsl-devel
 jemalloc-devel
+lcov
 libAfterImage-devel
 libiodbc-devel
 libtiff-devel
@@ -35,11 +35,11 @@ make
 mesa-libGL-devel
 mesa-libGLU-devel
 mysql-devel
+ncurses-libs
+openjpeg2-devel
 openldap-devel
 openssl-devel
 pcre-devel
-ncurses-libs
-openjpeg2-devel
 postgresql-devel
 protobuf-compiler
 protobuf-devel
@@ -48,6 +48,7 @@ python3
 python3-devel
 python3-numpy
 python3-pip
+python3-venv
 qt5-qtwebengine-devel
 R-devel
 R-Rcpp-devel
