@@ -60,6 +60,7 @@ libz-dev
 libzstd-dev
 locales
 make
+ninja-build
 protobuf-compiler
 python3
 python3-dev

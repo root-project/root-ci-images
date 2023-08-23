@@ -35,6 +35,7 @@ mesa-libGL-devel
 mesa-libGLU-devel
 mysql-devel
 ncurses-libs
+ninja-build
 ocaml-findlib-devel
 openldap-devel
 openssl-devel

@@ -36,6 +36,7 @@ mesa-libGL-devel
 mesa-libGLU-devel
 mysql-devel
 ncurses-libs
+ninja-build
 openjpeg2-devel
 openldap-devel
 openssl-devel
