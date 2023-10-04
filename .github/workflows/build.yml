@@ -1,5 +1,5 @@
 # This workflow creates docker images that are used for building ROOT in a Jenkins pipeline
-# 
+#
 # All created images are uploaded to GitHub Container registry
 
 name: Create images v2
@@ -17,7 +17,19 @@ jobs:
   build:
     strategy:
       matrix:
-        image: ["debug", "debian10", "fedora37", "fedora37-test", "fedora38", "fedora39", "alma8", "alma9", "ubuntu2304", "ubuntu22", "ubuntu20", "ubuntu18"]
+        image:
+        - debug
+        - debian10
+        - fedora37
+        - fedora37-test
+        - fedora38
+        - fedora39
+        - alma8
+        - alma9
+        - ubuntu2304
+        - ubuntu22
+        - ubuntu20
+        - ubuntu18
       fail-fast: false
 
     runs-on: ubuntu-latest
