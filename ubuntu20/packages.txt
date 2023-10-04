@@ -61,6 +61,7 @@ libzstd-dev
 locales
 make
 ninja-build
+nlohmann-json3-dev
 protobuf-compiler
 python3
 python3-dev
