@@ -29,6 +29,7 @@ libXext-devel
 libXft-devel
 libxml2-devel
 libXpm-devel
+libzstd-devel
 lz4-devel
 make
 mesa-libGL-devel
