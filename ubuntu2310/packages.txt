@@ -55,6 +55,7 @@ libxext-dev
 libxft-dev
 libxml2-dev
 libxpm-dev
+libxrootd-client-dev
 libxxhash-dev
 libz-dev
 libzstd-dev
