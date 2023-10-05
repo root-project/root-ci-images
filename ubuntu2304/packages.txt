@@ -49,6 +49,7 @@ libssl-dev
 libtbb-dev
 libtiff-dev
 libuuid1
+libvdt-dev
 libx11-dev
 libxext-dev
 libxft-dev
