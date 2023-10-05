@@ -24,6 +24,7 @@ jemalloc-devel
 libAfterImage-devel
 libiodbc-devel
 libtiff-devel
+libuuid-devel
 libX11-devel
 libXext-devel
 libXft-devel

@@ -27,6 +27,7 @@ libAfterImage-devel
 libiodbc-devel
 libjpeg-turbo-devel
 libtiff-devel
+libuuid-devel
 libX11-devel
 libXext-devel
 libXft-devel
