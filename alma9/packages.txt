@@ -65,7 +65,7 @@ srm-ifce-devel
 tbb-devel
 unixODBC-devel
 unuran-devel
-xrootd-server-devel
+xrootd-client-devel
 xxhash-devel
 xz-devel
 zeromq-devel

@@ -64,7 +64,7 @@ sqlite-devel
 srm-ifce-devel
 unixODBC-devel
 urw-fonts
-xrootd-server-devel
+xrootd-client-devel
 xxhash-devel
 xz-devel
 zlib-devel
