@@ -30,6 +30,7 @@ libglu-dev
 libgraphviz-dev
 libgsl-dev
 libgsl0-dev
+libgtest-dev
 libjemalloc-dev
 libjpeg-dev
 libkrb5-dev

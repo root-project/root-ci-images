@@ -22,6 +22,7 @@ gl2ps-devel
 glew-devel
 graphviz-devel
 gsl-devel
+gtest-devel
 jemalloc-devel
 libAfterImage-devel
 libiodbc-devel
