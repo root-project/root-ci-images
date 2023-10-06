@@ -62,6 +62,7 @@ redhat-lsb-core
 redhat-rpm-config
 sqlite-devel
 srm-ifce-devel
+tbb-devel
 unixODBC-devel
 urw-fonts
 xrootd-client-devel
