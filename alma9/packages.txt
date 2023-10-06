@@ -20,6 +20,7 @@ git
 gl2ps-devel
 gl2ps-devel
 glew-devel
+gmock-devel
 graphviz-devel
 gsl-devel
 gtest-devel
