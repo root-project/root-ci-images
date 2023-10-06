@@ -27,6 +27,7 @@ libgif-dev
 libgl2ps-dev
 libglew-dev
 libglu-dev
+libgmock-dev
 libgraphviz-dev
 libgsl-dev
 libgsl0-dev
