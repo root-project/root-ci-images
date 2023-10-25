@@ -1,22 +1,17 @@
-
 FROM fedora:37
 
-# RUN useradd -s /bin/bash sftnight
+COPY packages.txt packages.txt
+ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
+ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.txt requirements-roottest.txt
 
 RUN dnf update -y \
- && dnf clean all \
- && rm -rf /var/cache/dnf
-
-COPY packages.txt packages.txt
-
-RUN dnf install $(cat packages.txt) -y --setopt=install_weak_deps=False \
+ && dnf install -y --setopt=install_weak_deps=False $(cat packages.txt) \
  && rm -f packages.txt \
  && dnf clean all \
  && rm -rf /var/cache/dnf
 
-ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
-ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.txt requirements-roottest.txt
-
-RUN python3 -m pip install --upgrade pip \
- && python3 -m pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
+RUN mkdir -p /py-venv \
+ && python3 -m venv /py-venv/ROOT-CI \
+ && /py-venv/ROOT-CI/bin/pip install --upgrade pip \
+ && /py-venv/ROOT-CI/bin/pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
  && rm -f requirements-root.txt requirements-roottest.txt
