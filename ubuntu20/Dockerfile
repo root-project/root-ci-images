@@ -13,9 +13,11 @@ RUN apt-get update -qq \
  && apt-get clean -y \
  && rm -rf /var/cache/apt/archives/* \
  && rm -rf /var/lib/apt/lists/* \
- && rm packages.txt
-
-RUN update-ca-certificates
+ && rm packages.txt \
+ && update-ca-certificates \
+ && curl -O -L https://github.com/Kitware/CMake/releases/download/v3.26.2/cmake-3.26.2-linux-x86_64.sh \
+ && sh ./cmake-*.sh --skip-license --prefix=/usr/local/ \
+ && rm ./cmake-*.sh
 
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
