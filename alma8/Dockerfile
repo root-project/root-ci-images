@@ -14,5 +14,5 @@ RUN dnf update -y \
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
+ && /py-venv/ROOT-CI/bin/pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk==1.4.0 \
  && rm -f requirements-root.txt requirements-roottest.txt
