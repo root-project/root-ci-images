@@ -6,8 +6,12 @@ ENV LANG=C.UTF-8
 
 COPY packages.txt packages.txt
 
+# Regarding the openjdk-??-jre-headless / ca-certificates-java:
+# https://bugs.launchpad.net/ubuntu/+source/ca-certificates-java/+bug/2003822
 RUN apt-get update -qq \
  && ln -sf /usr/share/zoneinfo/UTC /etc/localtime  \
+ && apt-get install -y openjdk-11-jre-headless ca-certificates-java \
+ && apt-get remove -y openjdk-11-jre-headless \
  && apt-get -y install $(cat packages.txt) --no-install-recommends \
  && apt-get autoremove -y \
  && apt-get clean -y \
