@@ -6,6 +6,8 @@ ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.
 
 RUN dnf update -y \
  && dnf install -y epel-release \
+ && dnf install -y 'dnf-command(config-manager)' \
+ && crb enable \
  && dnf install -y --setopt=install_weak_deps=False $(cat packages.txt) \
  && rm -f packages.txt \
  && dnf clean all \
