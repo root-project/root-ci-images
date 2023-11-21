@@ -9,10 +9,7 @@ RUN dnf update -y \
  && dnf install -y --setopt=install_weak_deps=False $(cat packages.txt) \
  && rm -f packages.txt \
  && dnf clean all \
- && rm -rf /var/cache/dnf \
- && curl -O -L https://github.com/Kitware/CMake/releases/download/v3.26.2/cmake-3.26.2-linux-x86_64.sh \
- && sh ./cmake-*.sh --skip-license --prefix=/usr/local/ \
- && rm ./cmake-*.sh
+ && rm -rf /var/cache/dnf
 
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
