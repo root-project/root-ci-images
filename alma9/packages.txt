@@ -53,7 +53,7 @@ protobuf-devel
 pythia8-devel
 python3
 python3-devel
-qt5-qtwebengine-devel
+qt6-qtwebengine-devel
 R-devel
 R-Rcpp-devel
 R-RInside-devel
