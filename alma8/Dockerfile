@@ -11,6 +11,11 @@ RUN dnf update -y \
  && dnf clean all \
  && rm -rf /var/cache/dnf
 
+# We request only Python 3.8 in our packages.txt file but the Alma8 image will
+# present also Python3.6, probably there as a dependency of other packages. Make
+# sure the OS recognizes our Python version as the main one.
+RUN alternatives --set python3 /usr/bin/python3.8
+
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --upgrade pip \
