@@ -12,8 +12,8 @@ RUN dnf update -y \
 
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
- && /py-venv/ROOT-CI/bin/pip install --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
  && rm -f requirements-root.txt requirements-roottest.txt
 
 # No numba for Python 3.12 yet, see https://github.com/numba/numba/issues/8841
