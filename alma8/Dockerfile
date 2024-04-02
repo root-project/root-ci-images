@@ -18,6 +18,6 @@ RUN alternatives --set python3 /usr/bin/python3.8
 
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
- && /py-venv/ROOT-CI/bin/pip install --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install -r requirements-root.txt -r requirements-roottest.txt openstacksdk==1.4.0 \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt -r requirements-roottest.txt openstacksdk==1.4.0 \
  && rm -f requirements-root.txt requirements-roottest.txt
