@@ -15,19 +15,13 @@ jobs:
     strategy:
       matrix:
         image:
-        - debug
-        - debian10
-        - fedora37
-        - fedora37-test
         - fedora38
         - fedora39
         - alma8
         - alma9
         - ubuntu2310
-        - ubuntu2304
         - ubuntu22
         - ubuntu20
-        - ubuntu18
       fail-fast: false
 
     runs-on: ubuntu-latest
