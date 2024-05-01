@@ -21,6 +21,7 @@ jobs:
         - ubuntu20
         - ubuntu22
         - ubuntu2310
+        - ubuntu2404
       fail-fast: false
 
     runs-on: ubuntu-latest
