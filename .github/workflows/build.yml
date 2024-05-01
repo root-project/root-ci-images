@@ -17,7 +17,6 @@ jobs:
         image:
         - alma8
         - alma9
-        - fedora38
         - fedora39
         - ubuntu20
         - ubuntu22
