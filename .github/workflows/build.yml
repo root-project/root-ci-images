@@ -18,6 +18,7 @@ jobs:
         - alma8
         - alma9
         - fedora39
+        - fedora40
         - ubuntu20
         - ubuntu22
         - ubuntu2310
