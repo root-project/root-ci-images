@@ -13,11 +13,8 @@ RUN dnf update -y \
  && dnf clean all \
  && rm -rf /var/cache/dnf
 
-# We consider the system packages in the python environment to make sure we pick
-# up a version of NumPy that is compiled with a system-compatible blas
-# implementation.
 RUN mkdir -p /py-venv \
- && python3 -m venv --system-site-packages /py-venv/ROOT-CI \
+ && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
  && rm -f requirements-root.txt requirements-roottest.txt
