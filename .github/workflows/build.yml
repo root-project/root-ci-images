@@ -17,6 +17,7 @@ jobs:
         image:
         - alma8
         - alma9
+        - debian125
         - fedora39
         - fedora40
         - ubuntu20
