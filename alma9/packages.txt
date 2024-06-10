@@ -27,6 +27,7 @@ gsl-devel
 gtest-devel
 jemalloc-devel
 libAfterImage-devel
+libasan
 libiodbc-devel
 libjpeg-turbo-devel
 libtiff-devel
