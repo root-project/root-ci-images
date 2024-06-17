@@ -17,6 +17,7 @@ jobs:
         image:
         - alma8
         - alma9
+        - alma9-clang
         - debian125
         - fedora39
         - fedora40
