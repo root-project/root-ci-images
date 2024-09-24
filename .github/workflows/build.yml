@@ -27,9 +27,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Only needed for arm, but seems to auto-disable on x86:
+      # Build multi-arch container.
+      # We do this using emulation to have both architectures in the same container,
+      # And also because our "real" arm runners are using podman, which doesn't support
+      # "docker buildx" that is used below.
       - name: Set up QEMU
+        if: matrix.platform != 'linux/amd64'
         uses: docker/setup-qemu-action@v3
+        with:
+          platforms: ${{ matrix.platform }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
