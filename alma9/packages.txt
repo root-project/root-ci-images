@@ -25,6 +25,7 @@ gmock-devel
 graphviz-devel
 gsl-devel
 gtest-devel
+hdf5-devel
 jemalloc-devel
 libAfterImage-devel
 libasan
