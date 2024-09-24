@@ -14,11 +14,11 @@ jobs:
   build:
     strategy:
       matrix:
-        distro: [alma8, alma9, alma9-clang, debian125, fedora39, fedora40, ubuntu20, ubuntu22, ubuntu2404]
+        distro: [alma8, alma9-clang, debian125, fedora39, fedora40, ubuntu20, ubuntu22, ubuntu2404]
         platform: [linux/amd64]
         include:
           - distro: alma9
-            platform: linux/arm64
+            platform: linux/amd64,linux/arm64
       fail-fast: false
 
     runs-on: ubuntu-latest
