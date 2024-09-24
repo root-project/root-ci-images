@@ -14,16 +14,11 @@ jobs:
   build:
     strategy:
       matrix:
-        image:
-        - alma8
-        - alma9
-        - alma9-clang
-        - debian125
-        - fedora39
-        - fedora40
-        - ubuntu20
-        - ubuntu22
-        - ubuntu2404
+        distro: [alma8, alma9, alma9-clang, debian125, fedora39, fedora40, ubuntu20, ubuntu22, ubuntu2404]
+        platform: [linux/amd64]
+        include:
+          - distro: alma9
+            platform: linux/arm64
       fail-fast: false
 
     runs-on: ubuntu-latest
@@ -31,6 +26,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # Only needed for arm, but seems to auto-disable on x86:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -46,10 +45,11 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./${{ matrix.image }}/
+          platforms: ${{ matrix.platform }}
+          context: ./${{ matrix.distro }}/
           push: ${{ github.event_name != 'pull_request' }}
-          tags: registry.cern.ch/root-ci/${{ matrix.image }}:buildready
+          tags: registry.cern.ch/root-ci/${{ matrix.distro }}${{ matrix.arch}}:buildready
           labels: org.opencontainers.image.source=https://github.com/${{ github.repository }}
           no-cache: ${{ github.event_name != 'push' && github.event_name != 'pull_request' }}
-          cache-from: type=gha,scope=${{ matrix.image }}
-          cache-to: type=gha,mode=max,scope=${{ matrix.image }}
+          cache-from: type=gha,scope=${{ matrix.distro }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.distro }}
