@@ -72,3 +72,4 @@ xxhash-devel
 xz-devel
 zeromq-devel
 zlib-devel
+ccache

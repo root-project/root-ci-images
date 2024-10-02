@@ -68,3 +68,4 @@ xrootd-client-devel
 xxhash-devel
 xz-devel
 zlib-devel
+ccache
