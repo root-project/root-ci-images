@@ -76,3 +76,4 @@ unixodbc-dev
 uuid-dev
 wget
 xlibmesa-glu-dev
+ccache
