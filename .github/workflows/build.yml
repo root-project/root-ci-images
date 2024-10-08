@@ -7,8 +7,8 @@ on:
     branches:
       - main
   schedule:
-    # every day
-    - cron:  '10 0 * * *'
+    # rebuild every sunday morning
+    - cron:  '15 6 * * 0'
 
 jobs:
   build:
