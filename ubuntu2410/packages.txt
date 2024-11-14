@@ -1,6 +1,7 @@
 automake
 binutils
 ca-certificates
+ccache
 cmake
 curl
 davix-dev
