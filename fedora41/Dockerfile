@@ -15,6 +15,3 @@ RUN mkdir -p /py-venv \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
  && rm -f requirements-root.txt requirements-roottest.txt
-
-# No numba for Python 3.12 yet, see https://github.com/numba/numba/issues/8841
-ENV ROOTTEST_IGNORE_NUMBA_PY3=1
