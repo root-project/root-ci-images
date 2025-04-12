@@ -18,9 +18,7 @@ RUN apt-get update -qq \
 RUN update-ca-certificates
 
 RUN mkdir -p /py-venv \
- && echo "onnx" > forbidden.txt \
- && grep -v -x -F -f forbidden.txt requirements-root.txt > requirements-root-cleaned.txt \
- && python3 -m venv /py-venv/ROOT-CI \
+ && python3 -m venv --system-site-packages /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root-cleaned.txt -r requirements-roottest.txt openstacksdk \
- && rm -f requirements-root.txt requirements-roottest.txt forbidden.txt requirements-root-cleaned.txt
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
+ && rm -f requirements-root.txt requirements-roottest.txt
