@@ -1,6 +1,7 @@
 automake
 binutils
 ca-certificates
+ccache
 cmake
 curl
 davix-dev
@@ -50,6 +51,7 @@ libsqlite3-dev
 libssl-dev
 libtbb-dev
 libtiff-dev
+libunuran-dev
 libuuid1
 libvdt-dev
 libx11-dev
@@ -78,4 +80,3 @@ uuid-dev
 wget
 xlibmesa-glu-dev
 xrootd-plugins
-ccache
