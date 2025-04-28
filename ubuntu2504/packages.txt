@@ -52,6 +52,7 @@ libsqlite3-dev
 libssl-dev
 libtbb-dev
 libtiff-dev
+libunuran-dev
 libuuid1
 libvdt-dev
 libx11-dev
