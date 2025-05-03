@@ -24,7 +24,6 @@ graphviz-devel
 gsl-devel
 gtest-devel
 json-devel
-libAfterImage-devel
 libX11-devel
 libXext-devel
 libXft-devel
