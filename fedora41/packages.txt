@@ -1,8 +1,6 @@
 R-RInside-devel
 R-Rcpp-devel
 R-devel
-avahi-compat-libdns_sd-devel
-avahi-devel
 binutils
 ccache
 cfitsio-devel
