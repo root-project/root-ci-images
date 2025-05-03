@@ -1,5 +1,3 @@
-avahi-compat-libdns_sd-devel
-avahi-devel
 binutils
 ccache
 cfitsio-devel
@@ -25,7 +23,7 @@ graphviz-devel
 gsl-devel
 gtest-devel
 hdf5-devel
-jemalloc-devel
+java
 libX11-devel
 libXext-devel
 libXft-devel
