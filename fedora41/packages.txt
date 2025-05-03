@@ -16,8 +16,6 @@ ftgl-devel
 gcc
 gcc-c++
 gcc-gfortran
-gfal2-all
-gfal2-devel
 giflib-devel
 git
 gl2ps-devel
