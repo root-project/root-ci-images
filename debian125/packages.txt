@@ -39,7 +39,6 @@ libllvm-ocaml-dev
 liblz4-dev
 liblzma-dev
 libpcre2-dev
-libpcre3-dev
 libpng-dev
 libpq-dev
 libprotobuf-dev

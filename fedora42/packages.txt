@@ -43,7 +43,6 @@ openblas-devel
 openjpeg2-devel
 openldap-devel
 openssl-devel
-pcre-devel
 pcre2-devel
 postgresql-devel
 protobuf-compiler

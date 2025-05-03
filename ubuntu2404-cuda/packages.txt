@@ -40,7 +40,6 @@ liblz4-dev
 liblzma-dev
 libmysqlclient-dev
 libpcre2-dev
-libpcre3-dev
 libpng-dev
 libpq-dev
 libprotobuf-dev
