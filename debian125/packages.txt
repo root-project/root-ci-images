@@ -23,7 +23,6 @@ libfcgi-dev
 libfftw3-dev
 libfreetype6-dev
 libftgl-dev
-libgfal2-dev
 libgif-dev
 libgl2ps-dev
 libglew-dev
