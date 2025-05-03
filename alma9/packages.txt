@@ -26,7 +26,6 @@ graphviz-devel
 gsl-devel
 gtest-devel
 hdf5-devel
-jemalloc-devel
 json-devel
 libAfterImage-devel
 libasan
