@@ -40,8 +40,7 @@ libllvm-ocaml-dev
 liblz4-dev
 liblzma-dev
 libmysqlclient-dev
-libpcre++-dev
-libpcre3-dev
+libpcre2-dev
 libpng-dev
 libpq-dev
 libprotobuf-dev
