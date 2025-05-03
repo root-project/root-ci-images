@@ -24,6 +24,7 @@ gsl-devel
 gtest-devel
 hdf5-devel
 java
+json-devel
 libX11-devel
 libXext-devel
 libXft-devel
@@ -54,7 +55,6 @@ python3
 python3-devel
 python3-numpy
 qt6-qtwebengine-devel
-rapidyaml-devel
 redhat-rpm-config
 sqlite-devel
 tbb-devel

@@ -24,6 +24,7 @@ graphviz-devel
 gsl-devel
 gtest-devel
 jemalloc-devel
+json-devel
 libAfterImage-devel
 libasan
 libiodbc-devel
