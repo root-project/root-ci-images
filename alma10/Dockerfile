@@ -1,4 +1,4 @@
-FROM almalinux:10-kitten
+FROM almalinux:10
 
 COPY packages.txt packages.txt
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
