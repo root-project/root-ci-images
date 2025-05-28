@@ -3,7 +3,6 @@ ENV LANG=C.UTF-8
 
 COPY packages.txt packages.txt
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
-ADD https://raw.githubusercontent.com/root-project/roottest/master/requirements.txt requirements-roottest.txt
 
 RUN apt-get update -qq \
  && ln -sf /usr/share/zoneinfo/UTC /etc/localtime  \
@@ -19,5 +18,5 @@ RUN update-ca-certificates
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt -r requirements-roottest.txt openstacksdk \
- && rm -f requirements-root.txt requirements-roottest.txt
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
+ && rm -f requirements-root.txt
