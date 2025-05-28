@@ -55,7 +55,6 @@ readline-devel
 redhat-lsb-core
 redhat-rpm-config
 sqlite-devel
-srm-ifce-devel
 tbb-devel
 unixODBC-devel
 unuran-devel
