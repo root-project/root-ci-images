@@ -34,6 +34,7 @@ lz4-devel
 make
 mesa-libGL-devel
 mesa-libGLU-devel
+mysql-devel
 ninja-build
 openblas-devel
 openjpeg2-devel
