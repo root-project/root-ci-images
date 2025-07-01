@@ -48,6 +48,7 @@ python3-cffi
 python3-debug
 python3-devel
 python3-numpy
+python3-openstacksdk
 python3-pandas
 python3-pytest
 python3-setuptools
