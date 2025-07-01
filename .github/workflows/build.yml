@@ -14,7 +14,7 @@ jobs:
   build:
     strategy:
       matrix:
-        distro: [alma8, alma9-clang, alma10, debian125, fedora41, fedora42, fedora43, ubuntu22, ubuntu2404, ubuntu2404-cuda, ubuntu2504, ubuntu2510]
+        distro: [alma8, alma9-clang, alma10, debian125, fedora41, fedora42, fedora43, rawhide, ubuntu22, ubuntu2404, ubuntu2404-cuda, ubuntu2504, ubuntu2510]
         platform: [linux/amd64]
         include:
           - distro: alma9
