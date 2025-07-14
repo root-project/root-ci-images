@@ -12,5 +12,5 @@ RUN dnf update -y \
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir numpy pandas pytest setuptools uhi pyspark dask distributed openstacksdk cffi nbconvert \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir numpy pandas pytest setuptools uhi pyspark dask distributed openstacksdk cffi nbconvert ipython ipykernel \
  && rm -f requirements-root.txt
