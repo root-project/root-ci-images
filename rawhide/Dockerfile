@@ -9,4 +9,5 @@ RUN dnf update -y \
  && rm -rf /var/cache/dnf
 
 RUN mkdir -p /py-venv \
- && python3-debug -m venv --system-site-packages /py-venv/ROOT-CI
+ && python3-debug -m venv --system-site-packages /py-venv/ROOT-CI \
+ && ipython kernel install --name "python3" --user
