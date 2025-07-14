@@ -1,6 +1,7 @@
 binutils
 ccache
 cfitsio-devel
+clang
 cmake
 curl
 davix-devel
