@@ -32,6 +32,7 @@ libXft-devel
 libXpm-devel
 libasan
 libjpeg-turbo-devel
+libomp
 libtiff-devel
 libuuid-devel
 libxml2-devel
