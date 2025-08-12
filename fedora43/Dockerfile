@@ -9,8 +9,17 @@ RUN dnf update -y \
  && dnf clean all \
  && rm -rf /var/cache/dnf
 
-RUN mkdir -p /py-venv \
- && python3 -m venv /py-venv/ROOT-CI \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir numpy pandas pytest setuptools uhi pyspark dask distributed openstacksdk cffi nbconvert ipython ipykernel metakernel matplotlib mplhep xgboost \
- && rm -f requirements-root.txt
+RUN mkdir -p /py-venv
+RUN cat > forbidden.txt <<'EOF'
+numba
+onnx
+scikit-learn
+tensorflow
+torch
+xgboost
+EOF
+RUN grep -v -x -F -f forbidden.txt requirements-root.txt > requirements-root-cleaned.txt && \
+    python3 -m venv /py-venv/ROOT-CI && \
+    /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip && \
+    /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root-cleaned.txt openstacksdk && \
+    rm -f requirements-root.txt forbidden.txt requirements-root-cleaned.txt
