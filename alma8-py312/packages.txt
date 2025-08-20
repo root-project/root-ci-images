@@ -51,8 +51,8 @@ postgresql-devel
 protobuf-compiler
 protobuf-devel
 pythia8-devel
-python38
-python38-devel
+python3.12
+python3.12-devel
 qt5-qtwebengine-devel
 R-devel
 R-Rcpp-devel
