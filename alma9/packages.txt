@@ -4,6 +4,7 @@ binutils
 cmake
 cfitsio-devel
 curl
+curl-devel
 davix-devel
 dcap-devel
 diffutils
