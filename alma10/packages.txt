@@ -4,6 +4,7 @@ cfitsio-devel
 clang
 cmake
 curl
+curl-devel
 davix-devel
 dcap-devel
 diffutils

@@ -6,6 +6,7 @@ ccache
 cfitsio-devel
 chromium
 cmake
+curl-devel
 davix-devel
 fftw-devel
 ftgl-devel
