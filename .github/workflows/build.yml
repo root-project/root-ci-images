@@ -16,7 +16,6 @@ jobs:
       matrix:
         distro:
           - alma8
-          - alma8-py312
           - alma10
           - debian125
           - debian13
