@@ -13,6 +13,7 @@ RUN mkdir -p /py-venv
 RUN cat > forbidden.txt <<'EOF'
 numba
 onnx
+onnxscript
 scikit-learn
 tensorflow
 torch
