@@ -23,5 +23,5 @@ RUN alternatives --set javac $(alternatives --display javac | grep 'family java-
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk==1.4.0 \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
  && rm -f requirements-root.txt
