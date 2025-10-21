@@ -20,8 +20,10 @@ RUN alternatives --set python3 /usr/bin/python3.12
 RUN alternatives --set java $(alternatives --display java | grep 'family java-17-openjdk' | cut -d' ' -f1)
 RUN alternatives --set javac $(alternatives --display javac | grep 'family java-17-openjdk' | cut -d' ' -f1)
 
+# Install torch directly from pytorch.org to avoid pulling in CUDA
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
  && rm -f requirements-root.txt
