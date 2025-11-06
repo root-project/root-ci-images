@@ -60,6 +60,7 @@ python3.12
 python3.12-devel
 qt5-qtwebengine-devel
 rapidyaml-devel
+readline-devel
 redhat-lsb-core
 redhat-rpm-config
 sqlite-devel

@@ -53,6 +53,7 @@ python3-openstacksdk
 python3-pandas
 python3-pytest
 python3-setuptools
+readline-devel
 sqlite-devel
 tbb-devel
 unuran-devel
