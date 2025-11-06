@@ -16,7 +16,6 @@ onnx
 onnxscript
 scikit-learn
 tensorflow
-torch
 xgboost
 EOF
 RUN grep -v -x -F -f forbidden.txt requirements-root.txt > requirements-root-cleaned.txt && \
