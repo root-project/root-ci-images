@@ -4,7 +4,6 @@ R-devel
 binutils
 ccache
 cfitsio-devel
-chromium
 cmake
 curl-devel
 davix-devel
