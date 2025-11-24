@@ -16,7 +16,6 @@ jobs:
       matrix:
         distro:
           - alma8
-          - alma10
           - debian125
           - debian13
           - fedora42
@@ -30,6 +29,8 @@ jobs:
         platform: [linux/amd64]
         include:
           - distro: alma9
+            platform: linux/amd64,linux/arm64
+          - distro: alma10
             platform: linux/amd64,linux/arm64
       fail-fast: false
 
