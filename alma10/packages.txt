@@ -38,6 +38,7 @@ libtiff-devel
 libuuid-devel
 libxml2-devel
 libzstd-devel
+llvm
 lz4-devel
 make
 mesa-libGL-devel
