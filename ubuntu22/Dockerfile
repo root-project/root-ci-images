@@ -16,6 +16,13 @@ RUN apt-get update -qq \
 
 RUN update-ca-certificates
 
+# Install a newer CMake version (let's use 3.30.5 because it's the same as in RHEL 10)
+RUN curl -LO https://github.com/Kitware/CMake/releases/download/v3.30.5/cmake-3.30.5-linux-x86_64.sh && \
+    chmod +x cmake-3.30.5-linux-x86_64.sh && \
+    ./cmake-3.30.5-linux-x86_64.sh --skip-license --prefix=/usr/local && \
+    rm cmake-3.30.5-linux-x86_64.sh && \
+    cmake --version
+
 # Install torch directly from pytorch.org to avoid pulling in CUDA
 RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
