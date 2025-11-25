@@ -7,7 +7,6 @@ RUN dnf update -y \
  && dnf install -y epel-release \
  && dnf install -y 'dnf-command(config-manager)' \
  && crb enable \
- && dnf config-manager --set-enabled epel-testing \
  && dnf install -y --setopt=install_weak_deps=False $(cat packages.txt) \
  && rm -f packages.txt \
  && dnf clean all \
