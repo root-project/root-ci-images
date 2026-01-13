@@ -17,7 +17,6 @@ jobs:
         distro:
           - alma8
           - debian125
-          - debian13
           - fedora42
           - fedora43
           - rawhide
@@ -32,6 +31,8 @@ jobs:
             platform: linux/amd64,linux/arm64
           - distro: alma10
             platform: linux/amd64,linux/arm64
+          - distro: debian13
+            platform: linux/amd64,linux/i386
       fail-fast: false
 
     runs-on: ubuntu-latest

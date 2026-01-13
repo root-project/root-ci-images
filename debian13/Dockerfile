@@ -17,9 +17,18 @@ RUN apt-get update -qq \
 RUN update-ca-certificates
 
 # Install torch directly from pytorch.org to avoid pulling in CUDA
-RUN mkdir -p /py-venv \
- && python3 -m venv /py-venv/ROOT-CI \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
- && rm -f requirements-root.txt
+# Must declare this to use it inside a RUN statement
+# Moreover, do not install any python package if we aren't on a 
+# 64 bits architecture.
+
+ARG TARGETARCH
+
+RUN if [ "$TARGETARCH" != "386" ]; then \
+        mkdir -p /py-venv \
+        && python3 -m venv /py-venv/ROOT-CI \
+        && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+        && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
+        && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
+        && rm -f requirements-root.txt;\
+    fi
+
