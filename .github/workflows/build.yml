@@ -28,8 +28,6 @@ jobs:
           - ubuntu2604
         platform: [linux/amd64]
         include:
-          - distro: alma9
-            platform: linux/amd64,linux/arm64
           - distro: alma10
             platform: linux/amd64,linux/arm64
           - distro: debian13

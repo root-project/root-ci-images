@@ -49,7 +49,6 @@ mesa-libGLU-devel
 mysql-devel
 ncurses-libs
 ninja-build
-ocaml-findlib-devel
 openblas-devel
 openldap-devel
 openssl-devel
