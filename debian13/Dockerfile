@@ -18,7 +18,7 @@ RUN update-ca-certificates
 
 # Install torch directly from pytorch.org to avoid pulling in CUDA
 # Must declare this to use it inside a RUN statement
-# Moreover, do not install any python package if we aren't on a 
+# Moreover, do not install any python package if we aren't on a
 # 64 bits architecture.
 
 ARG TARGETARCH
@@ -29,6 +29,12 @@ RUN if [ "$TARGETARCH" != "386" ]; then \
         && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
         && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
         && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
-        && rm -f requirements-root.txt;\
+        && rm -f requirements-root.txt; \
+    else \
+        apt-get -y install nodejs \
+        mkdir -p /__e/node20/bin \
+        ln -s /usr/bin/node /__e/node20/bin/node \
+        mkdir -p /__e/node24/bin \
+        ln -s /usr/bin/node /__e/node24/bin/node; \
     fi
 
