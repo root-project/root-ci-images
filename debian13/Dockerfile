@@ -32,9 +32,9 @@ RUN if [ "$TARGETARCH" != "386" ]; then \
         && rm -f requirements-root.txt; \
     else \
         apt-get -y install nodejs \
-        mkdir -p /__e/node20/bin \
-        ln -s /usr/bin/node /__e/node20/bin/node \
-        mkdir -p /__e/node24/bin \
-        ln -s /usr/bin/node /__e/node24/bin/node; \
+        && mkdir -p /__e/node20/bin \
+        && ln -s /usr/bin/node /__e/node20/bin/node \
+        && mkdir -p /__e/node24/bin \
+        && ln -s /usr/bin/node /__e/node24/bin/node; \
     fi
 
