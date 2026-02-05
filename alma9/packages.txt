@@ -4,6 +4,7 @@ R-devel
 avahi-compat-libdns_sd-devel
 avahi-devel
 binutils
+blas
 ccache
 cfitsio-devel
 cmake
@@ -50,7 +51,6 @@ mysql-devel
 ncurses-libs
 ninja-build
 ocaml-findlib-devel
-openblas-devel
 openldap-devel
 openssl-devel
 pcre2-devel

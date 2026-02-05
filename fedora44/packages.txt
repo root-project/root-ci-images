@@ -2,6 +2,7 @@ R-RInside-devel
 R-Rcpp-devel
 R-devel
 binutils
+blas
 ccache
 cfitsio-devel
 chromium
@@ -37,7 +38,6 @@ mesa-libGL-devel
 mesa-libGLU-devel
 mysql-devel
 ninja-build
-openblas-devel
 openjpeg2-devel
 openssl-devel
 pcre2-devel
