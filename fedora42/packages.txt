@@ -2,7 +2,7 @@ R-RInside-devel
 R-Rcpp-devel
 R-devel
 binutils
-blas
+blas-devel
 ccache
 cfitsio-devel
 chromium
