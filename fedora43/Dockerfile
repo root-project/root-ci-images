@@ -9,13 +9,10 @@ RUN dnf update -y \
  && dnf clean all \
  && rm -rf /var/cache/dnf
 
-RUN mkdir -p /py-venv
-RUN cat > forbidden.txt <<'EOF'
-tensorflow
-xgboost
-EOF
-RUN grep -v -x -F -f forbidden.txt requirements-root.txt > requirements-root-cleaned.txt && \
-    python3 -m venv /py-venv/ROOT-CI && \
-    /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip && \
-    /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root-cleaned.txt openstacksdk && \
-    rm -f requirements-root.txt forbidden.txt requirements-root-cleaned.txt
+# Install torch directly from pytorch.org to avoid pulling in CUDA
+RUN mkdir -p /py-venv \
+ && python3 -m venv /py-venv/ROOT-CI \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
+ && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
+ && rm -f requirements-root.txt
