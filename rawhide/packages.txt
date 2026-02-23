@@ -6,6 +6,7 @@ blas-devel
 ccache
 cfitsio-devel
 cmake
+cppzmq-devel
 curl-devel
 davix-devel
 fftw-devel
@@ -59,4 +60,5 @@ unuran-devel
 xrootd-client-devel
 xxhash-devel
 xz-devel
+zeromq-devel
 zlib-devel

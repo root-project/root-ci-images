@@ -7,6 +7,7 @@ ccache
 cfitsio-devel
 chromium
 cmake
+cppzmq-devel
 curl-devel
 davix-devel
 dcap-devel
@@ -60,4 +61,5 @@ urw-fonts
 xrootd-client-devel
 xxhash-devel
 xz-devel
+zeromq-devel
 zlib-devel
