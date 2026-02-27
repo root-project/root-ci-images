@@ -6,7 +6,7 @@ cmake
 curl
 davix-dev
 dcap-dev
-default-jre-headless
+openjdk-21-jre-headless
 dpkg-dev
 fonts-freefont-ttf
 g++
