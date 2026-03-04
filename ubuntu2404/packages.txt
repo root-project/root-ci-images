@@ -3,6 +3,7 @@ binutils
 ca-certificates
 ccache
 cmake
+cppzmq-dev
 curl
 davix-dev
 dcap-dev
@@ -61,6 +62,7 @@ libxpm-dev
 libxrootd-client-dev
 libxxhash-dev
 libz-dev
+libzmq3-dev
 libzstd-dev
 locales
 make
