@@ -17,7 +17,6 @@ gcc-gfortran
 giflib-devel
 git
 gl2ps-devel
-glew-devel
 gmock-devel
 graphviz-devel
 gsl-devel
