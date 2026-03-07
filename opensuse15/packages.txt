@@ -24,6 +24,7 @@ gmock
 graphviz-devel
 gsl-devel
 gtest
+gzip
 hdf5-devel
 libjson-c-devel
 libpng-devel
