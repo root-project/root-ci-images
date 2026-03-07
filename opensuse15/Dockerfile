@@ -1,4 +1,4 @@
-FROM opensuse/leap:15.6
+FROM opensuse/leap:15
 
 ENV LANG=C.UTF-8
 
@@ -11,7 +11,7 @@ RUN zypper -n ref \
     && zypper -n clean -a \
     && rm -rf /var/cache/zypp
 
-# Install GCC 13 (Leap 15.6 ships GCC 7.5 by default)
+# Install GCC 13 (Leap 15.x ships GCC 7.5 by default)
 RUN zypper -n install --no-recommends gcc13 gcc13-c++ gcc13-fortran libstdc++6-devel-gcc13 \
     && zypper -n clean -a
 
