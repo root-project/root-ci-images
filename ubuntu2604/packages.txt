@@ -17,6 +17,7 @@ graphviz-dev
 libafterimage-dev
 libblas-dev
 libcfitsio-dev
+libcrypt-dev
 libcurl4-openssl-dev
 libfftw3-dev
 libfreetype6-dev
