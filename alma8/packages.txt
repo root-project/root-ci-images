@@ -4,6 +4,7 @@ R-devel
 avahi-compat-libdns_sd-devel
 avahi-devel
 binutils
+blas-devel
 ccache
 cfitsio-devel
 cmake
