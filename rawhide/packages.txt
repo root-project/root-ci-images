@@ -53,6 +53,7 @@ python3-openstacksdk
 python3-pandas
 python3-pytest
 python3-setuptools
+python3.14-freethreading
 readline-devel
 sqlite-devel
 tbb-devel
