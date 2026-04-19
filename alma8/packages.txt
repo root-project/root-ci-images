@@ -31,7 +31,6 @@ gtest-devel
 java-17-openjdk
 java-17-openjdk-devel
 json-devel
-libAfterImage-devel
 libX11-devel
 libXext-devel
 libXft-devel

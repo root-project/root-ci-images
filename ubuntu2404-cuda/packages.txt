@@ -14,7 +14,6 @@ gcc
 gfortran
 git
 graphviz-dev
-libafterimage-dev
 libavahi-compat-libdnssd-dev
 libblas-dev
 libcfitsio-dev
