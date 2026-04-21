@@ -29,6 +29,8 @@ jobs:
           - opensuse15
         platform: [linux/amd64]
         include:
+          - distro: fedora44
+            platform: linux/amd64,linux/arm64
           - distro: alma9
             platform: linux/amd64
           - distro: alma10
