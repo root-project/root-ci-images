@@ -41,6 +41,7 @@ mysql-devel
 ninja-build
 openjpeg2-devel
 openssl-devel
+openssl-devel-engine
 pcre2-devel
 protobuf-compiler
 protobuf-devel
