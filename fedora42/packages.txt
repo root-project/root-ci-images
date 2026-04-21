@@ -43,6 +43,7 @@ ninja-build
 openjpeg2-devel
 openldap-devel
 openssl-devel
+openssl-devel-engine
 pcre2-devel
 postgresql-devel
 protobuf-compiler
