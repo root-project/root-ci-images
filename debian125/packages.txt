@@ -43,6 +43,7 @@ libpq-dev
 libprotobuf-dev
 libprotoc-dev
 libreadline-dev
+libsm-dev
 libsqlite3-dev
 libssl-dev
 libtbb-dev
