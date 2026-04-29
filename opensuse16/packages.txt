@@ -39,6 +39,7 @@ libuuid-devel
 libxml2-devel
 libzstd-devel
 liblz4-devel
+libstdc++6-devel
 make
 Mesa-libGL-devel
 glu-devel
