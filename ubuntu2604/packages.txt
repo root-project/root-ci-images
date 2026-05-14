@@ -2,6 +2,7 @@ automake
 binutils
 ca-certificates
 ccache
+civetweb
 cmake
 cppzmq-dev
 curl
@@ -16,6 +17,7 @@ git
 graphviz-dev
 libblas-dev
 libcfitsio-dev
+libcivetweb-dev
 libcrypt-dev
 libcurl4-openssl-dev
 libfftw3-dev
