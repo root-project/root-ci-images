@@ -9,6 +9,7 @@ curl-devel
 davix-devel
 dcap-devel
 diffutils
+doxygen
 fcgi
 fcgi-devel
 fftw-devel
@@ -28,6 +29,7 @@ gtest-devel
 hdf5-devel
 java
 json-devel
+krb5-workstation
 libX11-devel
 libXext-devel
 libXft-devel
@@ -58,12 +60,14 @@ protobuf-devel
 pythia8-devel
 python3
 python3-devel
+qt5-doctools
 readline-devel
 redhat-rpm-config
 sqlite-devel
 tbb-devel
 unixODBC-devel
 unuran-devel
+xrootd-client
 xrootd-client-devel
 xxhash-devel
 xz-devel
