@@ -63,6 +63,8 @@ libz-dev
 libzmq3-dev
 libzstd-dev
 locales
+xvfb
+xauth
 make
 ninja-build
 nlohmann-json3-dev
