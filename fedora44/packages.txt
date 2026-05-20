@@ -57,3 +57,4 @@ xxhash-devel
 xz-devel
 zeromq-devel
 zlib-devel
+qt6-qtwebengine-devel
