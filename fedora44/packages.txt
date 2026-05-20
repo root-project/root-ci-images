@@ -34,6 +34,8 @@ libuuid-devel
 libxml2-devel
 libzstd-devel
 lz4-devel
+xorg-x11-server-Xvfb
+xorg-x11-xauth
 make
 mesa-libGL-devel
 mesa-libGLU-devel
