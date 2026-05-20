@@ -6,6 +6,7 @@ COPY packages.txt packages.txt
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
 
 RUN zypper -n ref \
+    && zypper dup -y \
     && zypper -n install --no-recommends $(cat packages.txt) \
     && rm -f packages.txt \
     && zypper -n clean -a \
