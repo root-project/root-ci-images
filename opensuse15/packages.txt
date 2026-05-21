@@ -46,7 +46,6 @@ glu-devel
 libmariadb-devel
 libncurses6
 ninja
-openldap2-devel
 libopenssl-devel
 pcre2-devel
 postgresql-devel
