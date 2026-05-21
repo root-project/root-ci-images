@@ -27,6 +27,7 @@ jobs:
           - ubuntu2510
           - ubuntu2604
           - opensuse15
+          - opensuse16
         platform: [linux/amd64]
         include:
           - distro: alma9
