@@ -36,7 +36,6 @@ libgtest-dev
 libjpeg-dev
 libkrb5-dev
 libldap2-dev
-libllvm-ocaml-dev
 liblz4-dev
 liblzma-dev
 libmysqlclient-dev

@@ -47,7 +47,6 @@ libmariadb-devel
 libncurses6
 ninja
 nlohmann_json-devel
-ocaml-findlib-devel
 openldap2_6-devel
 libopenssl-devel
 pcre2-devel
