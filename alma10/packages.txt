@@ -50,7 +50,6 @@ mesa-libGLU-devel
 mysql8.4-devel
 ncurses-libs
 ninja-build
-ocaml-findlib-devel
 openldap-devel
 openssl-devel
 pcre2-devel
