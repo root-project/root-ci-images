@@ -27,7 +27,7 @@ gtest
 gzip
 hdf5-devel
 libjson-c-devel
-libpng-devel
+libpng16-devel
 libX11-devel
 libXext-devel
 libXft-devel
