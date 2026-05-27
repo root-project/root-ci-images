@@ -17,7 +17,6 @@ jobs:
         distro:
           - alma8
           - debian125
-          - fedora42
           - fedora43
           - fedora44
           - rawhide
