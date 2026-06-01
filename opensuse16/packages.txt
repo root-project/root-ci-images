@@ -46,6 +46,7 @@ glu-devel
 libmariadb-devel
 libncurses6
 ninja
+nlohmann_json-devel
 ocaml-findlib-devel
 openldap2_6-devel
 libopenssl-devel
