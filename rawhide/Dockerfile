@@ -11,12 +11,22 @@ RUN dnf update -y \
 RUN mkdir -p /py-venv-3.14t \
  && python3.14t -m venv /py-venv-3.14t/ROOT-CI \
  && /py-venv-3.14t/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv-3.14t/ROOT-CI/bin/pip install --no-cache-dir numpy pytest requests setuptools
+ && /py-venv-3.14t/ROOT-CI/bin/pip install --no-cache-dir numpy pandas pytest requests setuptools openstacksdk
 
 RUN mkdir -p /py-venv-3.14td \
  && python3.14td -m venv /py-venv-3.14td/ROOT-CI \
  && /py-venv-3.14td/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv-3.14td/ROOT-CI/bin/pip install --no-cache-dir numpy pytest requests setuptools
+ && /py-venv-3.14td/ROOT-CI/bin/pip install --no-cache-dir numpy pandas pytest requests setuptools openstacksdk
+
+RUN mkdir -p /py-venv-3.15t \
+ && python3.15t -m venv /py-venv-3.15t/ROOT-CI \
+ && /py-venv-3.15t/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv-3.15t/ROOT-CI/bin/pip install --no-cache-dir numpy pandas pytest requests setuptools openstacksdk
+
+RUN mkdir -p /py-venv-3.15td \
+ && python3.15td -m venv /py-venv-3.15td/ROOT-CI \
+ && /py-venv-3.15td/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv-3.15td/ROOT-CI/bin/pip install --no-cache-dir numpy pandas pytest requests setuptools openstacksdk
 
 RUN mkdir -p /py-venv \
  && python3-debug -m venv --system-site-packages /py-venv/ROOT-CI \
