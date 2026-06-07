@@ -56,6 +56,9 @@ python3-setuptools
 python3.14-freethreading
 python3.14-freethreading-debug
 python3.14-freethreading-devel
+python3.15-freethreading
+python3.15-freethreading-debug
+python3.15-freethreading-devel
 readline-devel
 sqlite-devel
 tbb-devel
