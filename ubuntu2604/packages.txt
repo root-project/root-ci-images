@@ -20,6 +20,7 @@ libcfitsio-dev
 libcivetweb-dev
 libcrypt-dev
 libcurl4-openssl-dev
+libedit-dev
 libfftw3-dev
 libfreetype6-dev
 libftgl-dev
@@ -40,6 +41,7 @@ liblz4-dev
 liblzma-dev
 libpcre2-dev
 libpng-dev
+libpolly-20-dev
 libpq-dev
 libprotobuf-dev
 libprotoc-dev
@@ -62,6 +64,7 @@ libxxhash-dev
 libz-dev
 libzmq3-dev
 libzstd-dev
+llvm-20
 locales
 xvfb
 xauth
