@@ -41,6 +41,7 @@ liblz4-dev
 liblzma-dev
 libpcre2-dev
 libpng-dev
+libpolly-20-dev
 libpq-dev
 libprotobuf-dev
 libprotoc-dev
