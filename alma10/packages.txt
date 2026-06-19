@@ -3,6 +3,7 @@ blas-devel
 ccache
 cfitsio-devel
 clang
+clang-tools-extra
 cmake
 curl
 curl-devel
