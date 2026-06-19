@@ -16,6 +16,7 @@ RUN mkdir -p /opt/cef \
     && curl -L https://cef-builds.spotifycdn.com/cef_binary_148.0.10%2Bg7ee53f5%2Bchromium-148.0.7778.218_linux64_minimal.tar.bz2.sha1 -o cef.tar.bz2.sha1 \
     && [ "$(cat cef.tar.bz2.sha1)" = "$(sha1sum cef.tar.bz2 | awk '{print $1}')" ] \
     && tar xjf cef.tar.bz2 \
+    && rm -f cef.tar.bz2 \
     && mv 'cef_binary_148.0.10+g7ee53f5+chromium-148.0.7778.218_linux64_minimal' cef_binary_148 \
     && cd cef_binary_148 \
     && mkdir build \
