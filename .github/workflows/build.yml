@@ -23,7 +23,6 @@ jobs:
           - ubuntu22
           - ubuntu2404
           - ubuntu2404-cuda
-          - ubuntu2510
           - ubuntu2604
           - opensuse16
         platform: [linux/amd64]
