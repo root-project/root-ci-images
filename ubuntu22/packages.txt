@@ -2,6 +2,7 @@ automake
 binutils
 ca-certificates
 ccache
+civetweb
 curl
 davix-dev
 dcap-dev
@@ -16,6 +17,7 @@ graphviz-dev
 libavahi-compat-libdnssd-dev
 libblas-dev
 libcfitsio-dev
+libcivetweb-dev
 libcurl4-openssl-dev
 libfcgi-dev
 libfftw3-dev
