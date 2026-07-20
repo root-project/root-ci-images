@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:24.04 AS image
 
 ENV LANG=C.UTF-8
 
@@ -23,3 +23,10 @@ RUN mkdir -p /py-venv \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
  && rm -f requirements-root.txt
+
+# Record the exact versions pip resolved to, so that CI can report them without
+# having to pull the image (see the pip-freeze stage below).
+RUN /py-venv/ROOT-CI/bin/pip freeze --local > /py-venv/ROOT-CI/pip-freeze.txt
+
+FROM scratch AS pip-freeze
+COPY --from=image /py-venv/ROOT-CI/pip-freeze.txt /

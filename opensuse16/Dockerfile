@@ -1,4 +1,4 @@
-FROM opensuse/leap:16.0
+FROM opensuse/leap:16.0 AS image
 
 ENV LANG=C.UTF-8
 
@@ -9,7 +9,7 @@ ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt 
 RUN zypper --gpg-auto-import-keys addrepo --refresh https://download.opensuse.org/repositories/science/openSUSE_Leap_16.0/ science
 
 RUN zypper --gpg-auto-import-keys -n ref \
-    && zypper -n install --no-recommends --allow-downgrade $(cat packages.txt) \
+    && zypper -n install --no-recommends --localow-downgrade $(cat packages.txt) \
     && rm -f packages.txt \
     && zypper -n clean -a \
     && rm -rf /var/cache/zypp
@@ -39,3 +39,10 @@ RUN mkdir -p /py-venv \
     && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
     && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
     && rm -f requirements-root.txt
+
+# Record the exact versions pip resolved to, so that CI can report them without
+# having to pull the image (see the pip-freeze stage below).
+RUN /py-venv/ROOT-CI/bin/pip freeze --local > /py-venv/ROOT-CI/pip-freeze.txt
+
+FROM scratch AS pip-freeze
+COPY --from=image /py-venv/ROOT-CI/pip-freeze.txt /

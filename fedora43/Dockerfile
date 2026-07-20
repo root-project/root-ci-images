@@ -1,4 +1,4 @@
-FROM fedora:43
+FROM fedora:43 AS image
 
 COPY packages.txt packages.txt
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
@@ -16,3 +16,10 @@ RUN mkdir -p /py-venv \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
  && rm -f requirements-root.txt
+
+# Record the exact versions pip resolved to, so that CI can report them without
+# having to pull the image (see the pip-freeze stage below).
+RUN /py-venv/ROOT-CI/bin/pip freeze --local > /py-venv/ROOT-CI/pip-freeze.txt
+
+FROM scratch AS pip-freeze
+COPY --from=image /py-venv/ROOT-CI/pip-freeze.txt /

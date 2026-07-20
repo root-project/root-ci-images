@@ -72,9 +72,38 @@ jobs:
         with:
           platforms: ${{ matrix.platform }}
           context: ./${{ matrix.distro }}/
+          target: image
           push: ${{ github.event_name != 'pull_request' }}
           tags: registry.cern.ch/root-ci/${{ matrix.distro }}${{ matrix.arch}}:buildready
           labels: org.opencontainers.image.source=https://github.com/${{ github.repository }}
           no-cache: ${{ github.event_name != 'push' && github.event_name != 'pull_request' }}
           cache-from: type=gha,scope=${{ matrix.distro }}
           cache-to: type=gha,mode=max,scope=${{ matrix.distro }}
+
+      # Export only the pip freeze files out of the build. This reuses the layers
+      # built above, so it costs nothing and does not download the image.
+      - name: Export resolved Python package versions
+        uses: docker/build-push-action@v6
+        with:
+          platforms: ${{ matrix.platform }}
+          context: ./${{ matrix.distro }}/
+          target: pip-freeze
+          outputs: type=local,dest=./pip-freeze
+          cache-from: type=gha,scope=${{ matrix.distro }}
+
+      - name: Report resolved Python package versions
+        run: |
+          for f in $(find ./pip-freeze -name '*.txt' | sort); do
+            {
+              echo "### ${{ matrix.distro }}: ${f#./pip-freeze/}"
+              echo '```'
+              cat "$f"
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          done
+
+      - name: Upload resolved Python package versions
+        uses: actions/upload-artifact@v6
+        with:
+          name: pip-freeze-${{ matrix.distro }}
+          path: ./pip-freeze

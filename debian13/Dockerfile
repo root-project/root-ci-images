@@ -1,4 +1,4 @@
-FROM debian:trixie
+FROM debian:trixie AS image
 
 ENV LANG=C.UTF-8
 
@@ -31,4 +31,17 @@ RUN if [ "$TARGETARCH" != "386" ]; then \
         && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
         && rm -f requirements-root.txt;\
     fi
+
+# Record the exact versions pip resolved to, so that CI can report them without
+# having to pull the image (see the pip-freeze stage below). On architectures
+# where we skip the venv entirely, leave an empty file so the stage still builds.
+RUN mkdir -p /py-venv/ROOT-CI \
+ && if [ -x /py-venv/ROOT-CI/bin/pip ]; then \
+        /py-venv/ROOT-CI/bin/pip freeze --local > /py-venv/ROOT-CI/pip-freeze.txt; \
+    else \
+        : > /py-venv/ROOT-CI/pip-freeze.txt; \
+    fi
+
+FROM scratch AS pip-freeze
+COPY --from=image /py-venv/ROOT-CI/pip-freeze.txt /
 
