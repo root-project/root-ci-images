@@ -6,7 +6,7 @@ COPY packages.txt packages.txt
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
 
 # add science repository to get xrootd
-RUN zypper --gpg-auto-import-keys addrepo --refresh https://download.opensuse.org/repositories/science/openSUSE_Leap_16.0/ science
+RUN zypper --gpg-auto-import-keys addrepo --refresh https://download.opensuse.org/repositories/science/16.0/ science
 
 RUN zypper --gpg-auto-import-keys -n ref \
     && zypper -n install --no-recommends --allow-downgrade $(cat packages.txt) \
