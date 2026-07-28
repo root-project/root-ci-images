@@ -1,5 +1,7 @@
 FROM fedora:rawhide
 
+ARG PIP_COOLDOWN=--uploaded-prior-to=P7D
+
 COPY packages.txt packages.txt
 
 RUN dnf update -y \

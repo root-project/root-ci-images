@@ -1,5 +1,7 @@
 FROM gitlab-registry.cern.ch/linuxsupport/alma8-base
 
+ARG PIP_COOLDOWN=--uploaded-prior-to=P7D
+
 COPY packages.txt packages.txt
 ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt requirements-root.txt
 
@@ -25,5 +27,5 @@ RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
- && /py-venv/ROOT-CI/bin/pip install --no-cache-dir -r requirements-root.txt openstacksdk \
+ && /py-venv/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk \
  && rm -f requirements-root.txt
