@@ -3,6 +3,11 @@ name: Create images
 on:
   pull_request:
   workflow_dispatch:
+    inputs:
+      ignore_pip_cooldown:
+        description: 'Ignore the cooldown period for pip installs'
+        default: false
+        type: boolean
   push:
     branches:
       - main
@@ -84,3 +89,4 @@ jobs:
           no-cache: ${{ github.event_name != 'push' && github.event_name != 'pull_request' }}
           cache-from: type=gha,scope=${{ matrix.distro }}
           cache-to: type=gha,mode=max,scope=${{ matrix.distro }}
+          build-args: ${{ inputs.ignore_pip_cooldown && 'PIP_COOLDOWN=' || '' }}
