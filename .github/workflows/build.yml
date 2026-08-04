@@ -84,7 +84,7 @@ jobs:
           platforms: ${{ matrix.platform }}
           context: ./${{ matrix.distro }}/
           push: ${{ github.event_name != 'pull_request' }}
-          tags: registry.cern.ch/root-ci/${{ matrix.distro }}${{ matrix.arch}}:buildready
+          tags: registry.cern.ch/root-ci/${{ matrix.distro }}:buildready
           labels: org.opencontainers.image.source=https://github.com/${{ github.repository }}
           no-cache: ${{ github.event_name != 'push' && github.event_name != 'pull_request' }}
           cache-from: type=gha,scope=${{ matrix.distro }}
