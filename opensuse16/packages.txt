@@ -67,4 +67,5 @@ zeromq-devel
 zlib-devel
 qt6-webenginecore-devel
 qt6-webenginewidgets-devel
+civetweb
 civetweb-devel
