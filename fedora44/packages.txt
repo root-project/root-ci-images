@@ -6,6 +6,8 @@ blas-devel
 ccache
 cfitsio-devel
 chromium
+civetweb
+civetweb-devel
 cmake
 cppzmq-devel
 curl-devel
