@@ -5,8 +5,6 @@ binutils
 blas-devel
 ccache
 cfitsio-devel
-# civetweb Not yet, pending 'unretire'
-# civetweb-devel Not yet, pending 'unretire'
 cmake
 cppzmq-devel
 curl-devel
