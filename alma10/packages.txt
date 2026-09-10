@@ -31,6 +31,7 @@ hdf5-devel
 java
 json-devel
 krb5-workstation
+libatomic
 libX11-devel
 libXext-devel
 libXft-devel
