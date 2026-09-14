@@ -1,6 +1,3 @@
-R-RInside-devel
-R-Rcpp-devel
-R-devel
 avahi-compat-libdns_sd-devel
 avahi-devel
 binutils
@@ -58,7 +55,6 @@ pythia8-devel
 python3.12
 python3.12-devel
 rapidyaml-devel
-readline-devel
 redhat-rpm-config
 s3cmd
 sqlite-devel
