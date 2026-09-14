@@ -1,4 +1,3 @@
-R-base-devel
 avahi-compat-mDNSResponder-devel
 libavahi-devel
 binutils
@@ -53,7 +52,6 @@ postgresql-devel
 protobuf-devel
 python313
 python313-devel
-readline-devel
 sqlite3-devel
 tar
 tbb-devel

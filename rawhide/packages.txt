@@ -1,6 +1,3 @@
-R-RInside-devel
-R-Rcpp-devel
-R-devel
 binutils
 blas-devel
 ccache
@@ -58,7 +55,6 @@ python3.14-freethreading-devel
 python3.15-freethreading
 python3.15-freethreading-debug
 python3.15-freethreading-devel
-readline-devel
 sqlite-devel
 tbb-devel
 unuran-devel
