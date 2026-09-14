@@ -30,5 +30,11 @@ RUN mkdir -p /py-venv \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
- && /py-venv/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk \
+ && /py-venv/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk
+
+RUN mkdir -p /py-venv-3.11 \
+ && python3.11 -m venv /py-venv-3.11/ROOT-CI \
+ && /py-venv-3.11/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv-3.11/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
+ && /py-venv-3.11/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk \
  && rm -f requirements-root.txt
