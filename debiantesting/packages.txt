@@ -55,7 +55,7 @@ libxrootd-client-dev
 libxxhash-dev
 libz-dev
 libzstd-dev
-llvm-22
+llvm-22-dev
 locales
 make
 ninja-build
