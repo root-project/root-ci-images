@@ -32,9 +32,26 @@ RUN mkdir -p /py-venv \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
  && /py-venv/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk
 
-RUN mkdir -p /py-venv-3.11 \
- && python3.11 -m venv /py-venv-3.11/ROOT-CI \
- && /py-venv-3.11/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
- && /py-venv-3.11/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
- && /py-venv-3.11/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk \
+# The python3.11 package from the Ubuntu 22.04 archive is stuck at the
+# 3.11.0rc1 pre-release, which is too old for the current Python ecosystem
+# (torch requires sys.get_int_max_str_digits, added in Python 3.11.0rc2).
+# Install Python 3.12 from the deadsnakes PPA instead.
+# The PPA's signing key is fetched as ASCII-armored text, which apt accepts
+# in trusted.gpg.d without needing gnupg in the image.
+RUN curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xba6932366a755776" \
+       -o /etc/apt/trusted.gpg.d/deadsnakes.asc \
+ && echo "deb https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy main" \
+       > /etc/apt/sources.list.d/deadsnakes.list \
+ && apt-get update -qq \
+ && apt-get -y install python3.12 python3.12-dev python3.12-venv --no-install-recommends \
+ && apt-get autoremove -y \
+ && apt-get clean -y \
+ && rm -rf /var/cache/apt/archives/* \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /py-venv-3.12 \
+ && python3.12 -m venv /py-venv-3.12/ROOT-CI \
+ && /py-venv-3.12/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
+ && /py-venv-3.12/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
+ && /py-venv-3.12/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk \
  && rm -f requirements-root.txt
