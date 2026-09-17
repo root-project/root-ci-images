@@ -10,6 +10,7 @@ cppzmq-devel
 curl-devel
 davix-devel
 fftw-devel
+flexiblas-devel
 ftgl-devel
 gcc
 gcc-c++
