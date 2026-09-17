@@ -63,6 +63,7 @@ srm-ifce-devel
 tbb-devel
 unixODBC-devel
 unuran-devel
+which
 xrootd-client-devel
 xxhash-devel
 xz-devel
