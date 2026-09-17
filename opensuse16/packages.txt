@@ -2,6 +2,7 @@ avahi-compat-mDNSResponder-devel
 libavahi-devel
 binutils
 blas-devel
+cairo
 ccache
 cfitsio-devel
 cmake
