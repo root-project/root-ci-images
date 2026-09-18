@@ -11,7 +11,7 @@ ADD https://raw.githubusercontent.com/root-project/root/master/requirements.txt 
 RUN zypper --gpg-auto-import-keys addrepo --refresh https://download.opensuse.org/repositories/science/16.0/ science
 
 RUN zypper --gpg-auto-import-keys -n ref \
-    && zypper -n install --no-recommends --allow-downgrade $(cat packages.txt) \
+    && zypper -n install --no-recommends --allow-downgrade $(grep -v "^#" < packages.txt) \
     && rm -f packages.txt \
     && zypper -n clean -a \
     && rm -rf /var/cache/zypp
