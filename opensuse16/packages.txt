@@ -22,6 +22,7 @@ gl2ps-devel
 glew-devel
 gmock
 graphviz-devel
+cairo-devel
 gsl-devel
 gtest
 gzip
