@@ -2,7 +2,6 @@ avahi-compat-mDNSResponder-devel
 libavahi-devel
 binutils
 blas-devel
-cairo
 ccache
 cfitsio-devel
 cmake
@@ -22,7 +21,6 @@ gl2ps-devel
 glew-devel
 gmock
 graphviz-devel
-cairo-devel
 gsl-devel
 gtest
 gzip
@@ -67,3 +65,6 @@ qt6-webenginecore-devel
 qt6-webenginewidgets-devel
 civetweb
 civetweb-devel
+# For CEF
+cairo-devel
+pango-devel
