@@ -6,6 +6,7 @@ cmake
 cppzmq-devel
 curl-devel
 davix-devel
+diffutils
 fftw-devel
 ftgl-devel
 gcc
