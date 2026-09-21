@@ -63,6 +63,7 @@ zeromq-devel
 zlib-devel
 qt6-webenginecore-devel
 qt6-webenginewidgets-devel
+qt6-gui-devel
 civetweb
 civetweb-devel
 # For CEF
