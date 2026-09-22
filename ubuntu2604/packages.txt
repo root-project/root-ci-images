@@ -58,6 +58,7 @@ libxxhash-dev
 libz-dev
 libzmq3-dev
 libzstd-dev
+qt6-base-dev
 locales
 xvfb
 xauth
