@@ -35,6 +35,7 @@ libgtest-dev
 libjpeg-dev
 liblz4-dev
 liblzma-dev
+libmathtext-dev
 libpcre2-dev
 libpng-dev
 libpolly-22-dev
