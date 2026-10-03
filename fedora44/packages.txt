@@ -3,6 +3,7 @@ blas-devel
 ccache
 cfitsio-devel
 chromium
+clang
 civetweb
 civetweb-devel
 cmake
@@ -27,6 +28,8 @@ libX11-devel
 libXext-devel
 libXft-devel
 libXpm-devel
+libcxx-devel
+libcxxabi-devel
 libiodbc-devel
 libtiff-devel
 libuuid-devel
