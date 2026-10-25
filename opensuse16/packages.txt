@@ -56,6 +56,7 @@ sqlite3-devel
 tar
 tbb-devel
 unixODBC-devel
+xrootd-client
 xrootd-client-devel
 xxhash-devel
 xz-devel
