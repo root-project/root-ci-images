@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-images:
     strategy:
       matrix:
         distro:
@@ -33,7 +33,6 @@ jobs:
           - rawhide
           - ubuntu22
           - ubuntu2404
-          - ubuntu2404-cuda
           - ubuntu2604
           - ubuntu2610
           - opensuse16
@@ -49,7 +48,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
+    steps: &build_steps
       - name: Free disk space
         run: |
           sudo rm -rf /usr/share/dotnet || true
@@ -91,3 +90,17 @@ jobs:
           cache-from: type=gha,scope=${{ matrix.distro }}
           cache-to: type=gha,mode=max,scope=${{ matrix.distro }}
           build-args: ${{ inputs.ignore_pip_cooldown && 'PIP_COOLDOWN=' || '' }}
+
+  # Builds FROM registry.cern.ch/root-ci/alma10:buildready, so it must run after
+  # the matrix above has finished.
+  # Steps are copied from above, so a single-entry matrix is needed to keep the steps valid.
+  build-alma10-cuda:
+    needs: build-images
+    if: ${{ !cancelled() }}
+    strategy:
+      matrix:
+        include:
+          - distro: alma10-cuda
+            platform: linux/amd64
+    runs-on: ubuntu-latest
+    steps: *build_steps
