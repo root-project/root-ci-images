@@ -1,4 +1,4 @@
-FROM almalinux:10
+FROM gitlab-registry.cern.ch/linuxsupport/alma10-base
 
 ARG PIP_COOLDOWN=--uploaded-prior-to=P7D
 

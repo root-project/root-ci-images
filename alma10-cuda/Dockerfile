@@ -1,4 +1,4 @@
-FROM: registry.cern.ch/root-ci/alma10:buildready
+FROM registry.cern.ch/root-ci/alma10:buildready
 
 # NVIDIA CUDA repo (AlmaLinux 10 is officially supported as rhel10)
 RUN dnf -y install dnf-plugins-core && \
