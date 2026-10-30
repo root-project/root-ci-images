@@ -2,6 +2,8 @@ binutils
 blas-devel
 ccache
 cfitsio-devel
+civetweb
+civetweb-devel
 cmake
 cppzmq-devel
 curl-devel
